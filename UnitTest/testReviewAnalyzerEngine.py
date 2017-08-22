@@ -56,4 +56,4 @@ class testReviewAnalyzerEngineMethods(unittest.TestCase):
     def test_run(self):
         engine = ReviewAnalyzerEngine()
         engine.set_engine_attributes(NaiveBayesReviewAnalyzer(), SimpleReviewScraper(html_retriever=MockHtmlRetriever()), 0, 5, 5)
-        engine.run()
+        engine.run(False)

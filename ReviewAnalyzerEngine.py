@@ -14,7 +14,6 @@ class ReviewAnalyzerEngine(object):
         self.number_of_crawlers = self.get_number_of_crawlers_from_prompt()
         self.number_of_pages_to_scrape = self.get_number_of_pages_to_scrape_from_prompt()
         self.number_of_reviews_to_display = self.get_number_of_reviews_to_display_from_prompt()
-        self.is_initialized = 1
         return
 
     def set_engine_attributes(self,review_analyzer, review_scraper, number_of_crawlers, number_of_page_to_scrape, number_of_reviews_to_display):
@@ -65,9 +64,9 @@ class ReviewAnalyzerEngine(object):
             if num.isdigit(): num = int(num)
         return num
 
-    def run(self):
+    def run(self, prompt_for_input):
 
-        if not self.is_initialized: self.get_user_input()
+        if prompt_for_input: self.get_user_input()
 
         website = "http://www.dealerrater.com/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/"
         target = "review-content"
@@ -83,6 +82,6 @@ class ReviewAnalyzerEngine(object):
 
 if __name__=="__main__":
     review_analyzer_engine = ReviewAnalyzerEngine()
-    review_analyzer_engine.run()
+    review_analyzer_engine.run(True)
 
 
