@@ -21,7 +21,7 @@ class ScrapyReviewScraper(ReviewScraperBase):
 
         return self.review_list
 
-    def deploy_crawlers(self,number_of_crawlers,class_target):
+    def deploy_crawlers(self, number_of_crawlers, class_target):
         process = CrawlerProcess()
 
         for i in range(0, number_of_crawlers):
@@ -29,7 +29,7 @@ class ScrapyReviewScraper(ReviewScraperBase):
 
         process.start()
 
-    def setup_urls_to_visit(self,base_url,num_pages_to_scrape):
+    def setup_urls_to_visit(self,base_url, num_pages_to_scrape):
         curr_page_num = 0
         while curr_page_num <= num_pages_to_scrape:
             self.urls_to_visit.append(ReviewScraperBase.get_next_page_url(base_url, curr_page_num))

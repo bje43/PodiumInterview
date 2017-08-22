@@ -17,8 +17,8 @@ class SimpleReviewScraper(ReviewScraperBase):
             if page_content is None: break
 
             curr_review_list = self.get_reviews_from_page_content(page_content, class_target)
-            review_list = review_list + (curr_review_list)
-            curr_page_url = self.get_next_page_url(web_url,curr_page_num)
+            review_list = review_list + curr_review_list
+            curr_page_url = self.get_next_page_url(web_url, curr_page_num)
             curr_page_num += 1
 
         return review_list

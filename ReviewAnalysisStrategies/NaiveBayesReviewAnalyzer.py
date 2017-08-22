@@ -8,7 +8,7 @@ class NaiveBayesReviewAnalyzer(ReviewAnalyzerBase):
     def __init__(self):
         self.classifier = Blobber(analyzer=NaiveBayesAnalyzer())
 
-    def get_review_score(self,review_text):
+    def get_review_score(self, review_text):
         analysis = self.classifier(str(review_text))
         return analysis.sentiment.p_pos
 

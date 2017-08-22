@@ -11,3 +11,4 @@ class TestSimpleReviewScraperMethods(unittest.TestCase):
     def test_scrape_reviews_from_page(self):
         review_list = self.review_scraper.scrape_reviews_from_page("UnitTest/MockHtml/MockHtml", "review-content", 5, "")
         self.assertTrue(len(review_list) == 40)
+        return

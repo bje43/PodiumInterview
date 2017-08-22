@@ -19,10 +19,10 @@ class TestReviewPrinterMethods(unittest.TestCase):
 
     def setup_test_files(self):
         self.test_files = [
-            ('//MockReportOutput/OutputTest1', 1),
-            ('//MockReportOutput/OutputTest2', 4),
-            ('//MockReportOutput/OutputTest3', 40),
-            ('//MockReportOutput/OutputTestBlank', 0)
+            ('/MockReportOutput/OutputTest1', 1),
+            ('/MockReportOutput/OutputTest2', 4),
+            ('/MockReportOutput/OutputTest3', 40),
+            ('/MockReportOutput/OutputTestBlank', 0)
         ]
 
     def test_get_formatted_reviews(self):
@@ -35,9 +35,9 @@ class TestReviewPrinterMethods(unittest.TestCase):
             self.assertTrue(actual_val == expected_val)
 
     def get_string_from_test_file(self, file_name):
-        basepath = os.path.dirname(__file__)
-        filepath = basepath + file_name
-        f = open(filepath, "r")
+        base_path = os.path.dirname(__file__)
+        file_path = base_path + file_name
+        f = open(file_path, "r")
         file_string = f.read()
         f.close()
         return file_string

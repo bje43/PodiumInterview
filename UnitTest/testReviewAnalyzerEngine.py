@@ -5,7 +5,6 @@ from ReviewAnalysisStrategies.PatternReviewAnalyzer import PatternReviewAnalyzer
 from ReviewAnalysisStrategies.NaiveBayesReviewAnalyzer import NaiveBayesReviewAnalyzer
 from ScraperStrategies.ScrapyReviewScraper import ScrapyReviewScraper
 from ScraperStrategies.SimpleReviewScraper import SimpleReviewScraper
-from ScraperStrategies.HtmlRetrievers.MockHtmlRetriever import MockHtmlRetriever
 
 class testReviewAnalyzerEngineMethods(unittest.TestCase):
 
@@ -52,8 +51,3 @@ class testReviewAnalyzerEngineMethods(unittest.TestCase):
             for type in valid_response_type:
                 result = method()
                 self.assertTrue(isinstance(result, type))
-
-    def test_run(self):
-        engine = ReviewAnalyzerEngine()
-        engine.set_engine_attributes(NaiveBayesReviewAnalyzer(), SimpleReviewScraper(html_retriever=MockHtmlRetriever()), 0, 5, 5)
-        engine.run(False)
