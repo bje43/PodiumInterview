@@ -1,0 +1,3559 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8"/>
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"3fe13ed4e9","applicationID":"11064412","transactionName":"NVUEbUMCW0cEV0xQXAwfK29yTHFRBFhdS2EHRg9cRhB2WwtASlZfDlUUEx4nUFUJUUprVhRZA05C","queueTime":0,"applicationTime":140,"ttGuid":"EFA65D3EE5313997","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<title>McKaig Chevrolet Buick - A Dealer For The People - Chevrolet, Buick, Service Center - Dealership Reviews</title>
+<meta content="Read 1192 Reviews of McKaig Chevrolet Buick - A Dealer For The People - Chevrolet, Buick, Service Center dealership reviews written by real people like you." name="description">
+<meta content="McKaig Chevrolet Buick - A Dealer For The People reviews, Chevrolet, Buick, Service Center, Gladewater, TX, 75647, dealer reviews, car dealership reviews" name="keywords">
+<meta content="initial-scale=1.0001, minimum-scale=1.0001, maximum-scale=1.0001, user-scalable=no, width=device-width" name="viewport"/>
+<meta content="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/locales/en-US/logo_dealerrater_fb_200x200.jpg" property="og:image">
+<!-- Adobe Analytics header -->
+<script src="//assets.adobedtm.com/36e159fa28ebd11f42c753477615b777373ed969/satelliteLib-8aa659234c7a876d510cbf77926a428314ca3a99.js"></script>
+<!-- Start Visual Website Optimizer Asynchronous Code --><script type="text/javascript">
+                                                                 if (location.search.indexOf("v=1") == -1) {
+                                                                     window._vis_opt_url = document.URL.replace(/\/\?/, "/?");
+                                                                     window._vis_opt_url = window._vis_opt_url.replace(/\/$/, "/");
+                                                                     window.vwoURL = _vis_opt_url
+                                                                 } else {
+                                                                     window.vwoURL = document.URL
+                                                                 }
+                                                                 var _vwo_code = function() {
+                                                                     var e = 78799, t = 2e3, n = 2500, r = false, i = false, s = document;
+                                                                     return {
+                                                                         use_existing_jquery: function() { return r }, library_tolerance: function() { return n },
+                                                                         finish: function() {
+                                                                             if (!i) {
+                                                                                 i = true;
+                                                                                 var e = s.getElementById("_vis_opt_path_hides");
+                                                                                 if (e) e.parentNode.removeChild(e)
+                                                                             }
+                                                                         },
+                                                                         finished: function() { return i },
+                                                                         load: function(e) {
+                                                                             var t = s.createElement("script");
+                                                                             t.src = e;
+                                                                             t.type = "text/javascript";
+                                                                             t.innerText;
+                                                                             t.onerror = function() { _vwo_code.finish() };
+                                                                             s.getElementsByTagName("head")[0].appendChild(t)
+                                                                         },
+                                                                         init: function() {
+                                                                             settings_timer = setTimeout("_vwo_code.finish()", t);
+                                                                             this.load("//dev.visualwebsiteoptimizer.com/j.php?a=" + e + "&u=" + encodeURIComponent(window.vwoURL) + "&r=" + Math.random());
+                                                                             var n = s.createElement("style"), r = "body{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}", i = s.getElementsByTagName("head")[0];
+                                                                             n.setAttribute("id", "_vis_opt_path_hides");
+                                                                             n.setAttribute("type", "text/css");
+                                                                             if (n.styleSheet) n.styleSheet.cssText = r;
+                                                                             else n.appendChild(s.createTextNode(r));
+                                                                             i.appendChild(n);
+                                                                             return settings_timer
+                                                                         }
+                                                                     }
+                                                                 }();
+                                                                 _vwo_settings_timer = _vwo_code.init();
+                                                             </script><!-- End Visual Website Optimizer Asynchronous Code -->
+<!-- required per licensing with myfonts.net --><link href="//hello.myfonts.net/count/2afa47" rel="stylesheet" type="text/css"/>
+<link href="http://www.dealerrater.com/ncdn/bundle/u/95.20170811.9/ResponsiveStylesBundle.bundle?v=IkEdNR_jVepW8Fhv94V1nTEAsU68ckld6bW3yP2vBaU1" rel="stylesheet"/>
+<script src="http://www.dealerrater.com/ncdn/bundle/u/95.20170811.9/HeadScriptBundle.bundle?v=h3_SfEcl0mU94cCFb4m_sddpIstTBNk8dFcesGUxQ8A1"></script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-87014-1']);
+  _gaq.push(['_setDomainName', 'dealerrater.com']);
+  _gaq.push(['_trackPageview']);
+
+  function recordOutboundLink(link, category, action, label, value, noninteraction) {
+     _gaq.push(['_trackEvent', category, action, label, value, noninteraction]);
+     setTimeout('document.location = "' + link.href + '"', 100);
+  }
+
+  (function () {
+     var ga = document.createElement('script');
+     ga.type = 'text/javascript';
+     ga.async = true;
+     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+     var s = document.getElementsByTagName('script')[0];
+     s.parentNode.insertBefore(ga, s);
+  })();
+
+  function recordEvent(category, action, label, value, noninteraction) {
+     _gaq.push(['_trackEvent', category, action, label, value, noninteraction]);
+  }
+</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T746MC');</script>
+<!-- End Google Tag Manager -->
+<!--[if lt IE 9]>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<link href="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/favicon.ico" rel="icon"/>
+<script type="text/javascript">
+        /* <![CDATA[ */
+        var google_conversion_id = 1068898459;
+        var google_custom_params = window.google_tag_params;
+        var google_remarketing_only = true;
+        /* ]]> */
+    </script>
+<script src="//www.googleadservices.com/pagead/conversion.js" type="text/javascript"></script>
+<script src="https://s.yimg.com/uv/dm/scripts/syndication.js"></script>
+<style>
+        #ypaAdWrapper-dealrater iframe {
+            width: 100%;
+        }
+    </style>
+<noscript>
+<div style="display:inline;">
+<img alt="" height="1" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1068898459/?value=0&amp;guid=ON&amp;script=0" style="border-style:none;" width="1"/>
+</div>
+</noscript>
+</meta></meta></meta></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-T746MC" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id="appUI">
+<!-- LEFT CONTAINER -->
+<div class="fill-width fill-height" id="leftContainer">
+<div class="mobile-nav-option bg-white">
+<a class="bolder dark-grey font-16 block pad-md" href="http://www.dealerrater.com/" title="Home">Home</a>
+<span class="absolute right pointer right-10 top-10"><img class="close" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_close_x.png" width="25"/></span>
+</div>
+<div class="mobile-nav-option active">
+<a class="bolder dark-grey font-16 block pad-md" href="http://www.dealerrater.com/reviews" title="Dealer Reviews">Dealer Reviews</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="bolder dark-grey font-16 block pad-md" href="http://www.dealerrater.com/service" title="Service Reviews">Service Reviews</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="bolder dark-grey font-16 block pad-md" href="http://www.dealerrater.com/classifieds" title="Cars for Sale">Cars for Sale</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="bolder dark-grey font-16 block pad-md" href="http://www.dealerrater.com/recalls" title="Car Recalls">Car Recalls</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="bolder dark-grey font-16 block pad-md" href="/consumer/writereviews/search" title="Write a Review">Write a Review</a>
+</div>
+<div class="mobile-nav-option font-16 bolder dark-grey pad-md" data-parent="#accordion" data-toggle="collapse" href="#mobileDealerPanel" onclick="dr.rotateDom('#mobileDealerPanelCaret','rot90')">
+    About Us
+    <span class="glyphicon glyphicon-chevron-right font-8 margin-left-lg " id="mobileDealerPanelCaret"></span>
+</div>
+<div class="panel-collapse collapse " id="mobileDealerPanel">
+<div class="mobile-nav-option ">
+<a class="dark-grey font-13 capitalize block pad-sm pad-left-lg" href="/consumer/company" title="Company">Company</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="dark-grey font-13 text-transform-none block pad-sm pad-left-lg" href="/consumer/company/pressandawards" title="Press and Awards">Press and Awards</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="dark-grey font-13 capitalize block pad-sm pad-left-lg" href="/consumer/company/events" title="Events">Events</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="dark-grey font-13 capitalize block pad-sm pad-left-lg" href="/consumer/company/people" title="People">People</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="dark-grey font-13 capitalize block pad-sm pad-left-lg" href="/consumer/company/careers" title="Careers">Careers</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="dark-grey font-13 capitalize block pad-sm pad-left-lg" href="/consumer/company/contact-us" title="Contact Us">Contact Us</a>
+</div>
+<div class="mobile-nav-option">
+<a class="dark-grey font-13 capitalize block pad-sm pad-left-lg" href="https://dealerrater.uservoice.com/knowledgebase/articles/844902-dealerrater-frequently-asked-questions" target="_blank" title="FAQ">FAQ</a>
+</div>
+</div>
+<div class="mobile-nav-option">
+<a class="bolder dark-grey font-14 block pad-md" href="/consumer/mytools/reviews" title="My Tools">My Tools</a>
+</div>
+<div class="mobile-nav-option">
+<a class="bolder dark-grey font-14 block pad-md" href="/dealers" title="Dealer Panel">Dealer Panel</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="bolder dark-grey font-14 block pad-md" href="http://www.dealerrater.com/info/privacy/" target="_blank" title="Privacy Policy">Privacy Policy</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="bolder dark-grey font-14 block pad-md" href="http://www.dealerrater.com/info/tou/" target="_blank" title="Terms of Use">Terms of Use</a>
+</div>
+<div class="mobile-nav-option ">
+<a class="bolder dark-grey font-14 block pad-md" href="http://www.dealerrater.com/info/community/" target="_blank" title="Community Guidelines">Community Guidelines</a>
+</div>
+<div class="mobile-nav-option">
+<a class="bolder dark-grey font-14 block pad-md" href="https://www.dealerrater.com/register/?ReturnUrl=http%3a%2f%2fwww.dealerrater.com%2fconsumer%2fdealer%2f23685%2freviewsnew%3fpage%3d2" title="Join">Join</a>
+</div>
+<div class="mobile-nav-option">
+<a class="bolder dark-grey font-14 block pad-md" href="https://www.dealerrater.com/login/?ReturnUrl=http%3a%2f%2fwww.dealerrater.com%2fconsumer%2fdealer%2f23685%2freviewsnew%3fpage%3d2" title="Login">Login</a>
+</div>
+<div class="absolute-bottom pad-md font-13" id="mobileLeftFooter">Copyright 2017 DR Media Holdings, LLC</div>
+</div>
+<!-- MAIN CONTAINER -->
+<div class="bg-grey-lt" id="mainContainer">
+<!-- PUSH DOWN NOTICE -->
+<!-- HEADER -->
+<header class="fill-width margin-none pad-none ">
+<!-- mobile nav -->
+<div class="col-xs-12 margin-none pad-none border-bottom fill-height" id="mobileNavContainer">
+<!-- Progress Tracker -->
+<!-- mobile nav toggle -->
+<div class="fill-height" id="mobileNavHeader">
+<div class="col-xs-4 fill-height ">
+<span class="header-icon glyphicon glyphicon-align-justify orange font-24 pointer border-right pad-top-sm pad-right-lg fill-height" id="hamburger" onclick="toggleMobileNav()"></span>
+<span class="header-icon glyphicon glyphicon-arrow-left orange font-24 pointer border-right pad-top-sm pad-right-lg fill-height" id="mobile-back"></span>
+</div>
+<!-- logo -->
+<div class="col-xs-4 text-center pad-top-sm">
+<a href="http://www.dealerrater.com/"><img class="logo-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/locales/en-US/logo_dealerrater.png"/></a>
+</div>
+<!-- search toggle -->
+<div class="col-xs-4 fill-height text-right " id="searchContainer">
+<span class="header-icon glyphicon glyphicon-search orange font-24 pointer border-left pad-top-sm pad-left-lg fill-height" id="searchToggle"></span>
+</div>
+</div>
+</div>
+<!-- primary nav -->
+<div class="" id="primaryNavContainer">
+<!-- color strip -->
+<div class="col-xs-12 margin-none pad-none ">
+<!-- left -->
+<div class="col-xs-5 theme-color1-bg"></div>
+<!-- center -->
+<div class="col-xs-2 theme-color2-bg pad-none">
+<!-- color1 buffer -->
+<div class="col-xs-3 theme-color1-bg"></div>
+<!-- color2 -->
+<div class="col-xs-6 theme-color2-bg"></div>
+<!-- color1 buffer -->
+<div class="col-xs-3 theme-color3-bg"></div>
+</div>
+<!-- right -->
+<div class="col-xs-5 theme-color3-bg"></div>
+</div>
+<!-- dealer panel -->
+<div class="col-xs-12 margin-none pad-top-sm pad-bottom-sm bg-grey-lt-md ">
+<div class="header-wrapper">
+<div class="col-xs-6 text-left"> </div>
+<!-- <div class="col-xs-2 theme-color-4 text-left">&nbsp;</div> -->
+<div class="col-xs-6 text-left pad-left-none pad-right-none">
+<div class="col-xs-1"> </div>
+<div class="col-xs-11 pad-none black text-right">
+<span><a class="black uppercase pad-right-sm pad-left-sm bold" href="/dealers" title="Dealer Panel">Dealer Panel</a> | <a class="black uppercase pad-left-sm bold" href="/dealers">Are you a dealer? <span class="light">Learn more</span></a></span>
+</div>
+</div>
+</div>
+</div>
+<!-- primary nav -->
+<div class="col-xs-12 fill-height bg-white">
+<div class="header-wrapper">
+<div class="col-xs-12 margin-none padding-none pad-right-none fill-height logo-container">
+<!-- logo -->
+<div class="pull-left pad-sm">
+<a class="pad-top-md pad-bottom-md block" href="http://www.dealerrater.com/"><img height="87" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/locales/en-US/logo_dealerrater.png"/></a>
+</div>
+<div class="pull-right fill-height ">
+<div class="table fill-height pad-top-sm">
+<!-- social media -->
+<div class="tr ">
+<div class="td text-right fill-height nav-text-bar">
+<a href="https://www.facebook.com/DealerRater" target="_blank"><img class="pointer pad-right-sm" rel="tooltip" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+<a href="https://twitter.com/dealerrater" target="_blank"><img class="pointer pad-right-sm" rel="tooltip" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="https://www.linkedin.com/company/dealerrater?trk=top_nav_home" target="_blank"><img class="pointer pad-right-sm" rel="tooltip" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_linkedin_sm.png"/></a>
+<a href="https://www.youtube.com/user/dealerrater" target="_blank"><img class="pointer pad-right-sm" rel="tooltip" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_youtube_sm.png"/></a>
+<span class="grey pad-left-sm pad-right-sm">|</span>
+<!-- locale selector -->
+<div class="inline-block" id="localeSelector">
+<div class="inline-block fill-width relative">
+<div class="absolute" id="selectedLocale">
+<img class="pointer pad-right-sm" id="selectedLocalImg" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/locales/en-US/icons/icn_flag.png" width="28"/>
+</div>
+<div class="nav-box-sm absolute hidden border-all bg-white pad-md uppercase text-left" id="localeList">
+<div class="wedge-top absolute"> </div>
+<a class="dark-grey" href="http://www.dealerrater.ca/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page2" title="Canada">Canada</a>
+</div>
+</div>
+<div class="pointer inline-block">
+<div class="glyphicon glyphicon-chevron-down grey font-8"></div>
+<span class="grey pad-right-sm pad-left-sm">|</span>
+</div>
+</div>
+<!-- unauthenticated users -->
+<div class="inline-block pointer">
+<a class="dark-grey uppercase" href="https://www.dealerrater.com/register/?ReturnUrl=http%3a%2f%2fwww.dealerrater.com%2fconsumer%2fdealer%2f23685%2freviewsnew%3fpage%3d2" title="Join">Join</a>
+<span class="grey pad-left-sm pad-right-sm">|</span>
+</div>
+<div class="inline-block pad-right-sm pointer">
+<a class="dark-grey uppercase" href="https://www.dealerrater.com/login/?ReturnUrl=http%3a%2f%2fwww.dealerrater.com%2fconsumer%2fdealer%2f23685%2freviewsnew%3fpage%3d2" title="Login">Login</a>
+</div>
+<!-- end unauthenticated users -->
+<div class="inline-block pad-left-sm">
+<input autocomplete="off" class="input-sm search-input border header-search-input" id="headerAutoComplete" placeholder="Search" type="text"/>
+<a href="#" onclick="location.href='/search/?q=' + escape($('.header-search-input').val().trim());"><img alt="Search" class="header-search-submit absolute" height="17" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_search_gray.png"/></a>
+</div>
+</div>
+</div>
+<div class="tr">
+<div class="td text-right fill-height pull-right margin-right-none" id="primaryNavTabsContainer">
+<!-- primary nav option -->
+<div class="inline-block primary-nav-option relative">
+<div class="quick-menu-tab pad-left-none">
+<a class="bold active" href="http://www.dealerrater.com/reviews/" title="Dealer Reviews">Dealer Reviews</a>
+</div>
+</div>
+<!-- primary nav option -->
+<div class="inline-block primary-nav-option relative">
+<div class="quick-menu-tab">
+<a class="bold black" href="http://www.dealerrater.com/service/" title="Service Reviews">Service Reviews</a>
+</div>
+</div>
+<!-- primary nav option -->
+<div class="inline-block primary-nav-option relative">
+<div class="quick-menu-tab">
+<a class="bold black" href="http://www.dealerrater.com/classifieds/" title="Cars for Sale">Cars for Sale</a>
+</div>
+</div>
+<!-- primary nav option -->
+<div class="inline-block primary-nav-option relative">
+<div class="quick-menu-tab">
+<a class="bold black" href="http://www.dealerrater.com/recalls/" title="Car Recalls">Car Recalls</a>
+</div>
+</div>
+<div class="inline-block primary-nav-option war">
+<div class="quick-menu-tab">
+<a class="black boldest" href="/consumer/writereviews/search" title="Write a Review">Write a Review</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<div class="col-xs-12 bg-grey-lt border-bottom" id="mobileSearch">
+<input autocomplete="off" class="search-input border header-mobile-search-input fill-width pad-sm font-16" id="mobileAutoComplete" placeholder="Search" type="text"/>
+<a href="#" onclick="location.href='/search/?q=' + escape($('.header-mobile-search-input').val().trim());"><img alt="Search" class="header-mobile-search-submit absolute" height="17" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_search_gray.png"/></a>
+</div>
+<!-- CONTENT -->
+<content class="fill-width fill-height">
+<div class="fill-width bg-grey-lt clear-fix" id="contentInner">
+<div class="block clear-fix pad-top-lg" id="pageContainer">
+<div class="section-container pad-none pad-bottom-lg clear-fix text-left col-xs-12" id="reviewsSection">
+<div class="col-xs-12 pad-none" id="overview">
+<a class="button-rounded-teal-border pull-left pad-top-sm pad-bottom-sm uppercase letter-spacing-2 margin-bottom-mdlg" href="#" id="mobileBack" onclick="toggleMobilePage()" style="display: none !important;"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
+<!-- PERSISTENT NAV -->
+<div class="width-100 bg-grey-lt box-shadow-bottom-extra-lt display-none" id="persistentNav">
+<div class="persistentNavWrapper">
+<div class="col-xs-12 hidden-xs" style="line-height: 64px;">
+<span class="font-28 bolder pull-left pad-left-sm line-height-125 pad-top-md" itemprop="name">McKaig Chevrolet Buick - A Dealer For The People</span>
+<div class="clear-fix wide-layout line-height-1 text-center">
+<div>
+<a class="black bolder font-14 letter-spacing-1 uppercase margin-right-xl inline-block pad-top-lg pad-left-lg pad-right-lg pad-bottom-md" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-review-23685/" onclick="recordEvent('Dealer-Profile', 'Persistent_Overview_click', '23685', null, false);">Overview</a>
+<a class=" black bolder font-14 margin-right-xl letter-spacing-1 uppercase inline-block pad-top-lg pad-bottom-md pad-left-lg pad-right-lg" href="/sales/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-Employees-23685/#link" onclick="recordEvent('Dealer-Profile', 'Persistent_Employees_click', '23685', null, false);">Employees</a>
+<a class="active black bolder font-14 margin-right-xl letter-spacing-1 uppercase inline-block pad-top-lg pad-bottom-md pad-left-lg pad-right-lg" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/#link" onclick="recordEvent('Dealer-Profile', 'Persistent_Reviews_click', '23685', null, false);">Reviews (1192)</a>
+<a class=" black bolder font-14 letter-spacing-1 uppercase inline-block pad-top-lg pad-bottom-md pad-left-lg pad-right-lg" href="/classifieds/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-cars-23685/" onclick="recordEvent('Dealer-Profile', 'Persistent_Inventory_click', '23685', null, false);">Inventory (160)</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 pad-none mobile-hide text-center" itemscope="" itemtype="http://schema.org/LocalBusiness">
+<div class="col-xs-12 pad-md pad-top-none overview-section">
+<a class=" no-wrap relative button-rounded-teal pad-left-lg pad-right-lg pad-top-sm pad-bottom-sm pull-left uppercase white font-14 letter-spacing-2 boldest ctaLink" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-review-23685/" id="dealerLink">
+<img class="valign-bottom" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-dealer-car-white.png"/> Dealership
+            </a>
+<a class=" relative button-rounded-teal-border pad-left-lg pad-right-lg pad-top-sm pad-bottom-sm pull-left uppercase white font-14 letter-spacing-2 boldest ctaLink" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-service-23685/" id="serviceLink" onclick="recordEvent('Dealer-Profile', 'Service-Center-tab_click', '23685', null, false);">
+<img class="wrench-icon valign-bottom" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-service-wrench-teal.png"/><span class="service-btn-text"> Service Center</span>
+</a>
+<a class="relative button-rounded-orange pad-left-xl pad-right-xl pad-top-sm pad-bottom-sm pull-right uppercase white font-14 letter-spacing-2 bolder line-height-150 ctaLink" href="/consumer/writereviews/23685?source=drp">
+<img class="valign-bottom star-icon display-none" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-star-white.png"/> <span class="review-btn-text">Write a review</span>
+</a>
+</div>
+<div class="col-xs-12 pad-none margin-top-md">
+<div class="col-xs-12 col-sm-9 pad-none pad-bottom-md">
+<div class="col-xs-12 text-left pad-left-md">
+<!-- certified badge, show nothing if not certified -->
+<div class="pull-left pad-right-mdlg pad-bottom-md relative" id="badge">
+<img class="badge-tooltip pointer" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/badge-certified-dealer.png"/>
+<div class="absolute pad-sm font-12 bold display-none" id="badge-tooltip">This dealership is a DealerRater® Certified Dealer and is committed to providing quality customer service.</div>
+</div>
+<!-- end badge -->
+<div class="overflow-auto">
+<h1 class="boldest font-28 black margin-bottom-sm margin-top-md text-transform-none" id="dealerName" itemprop="name">McKaig Chevrolet Buick - A Dealer For The People</h1>
+<!-- mobile rating-->
+<div class="pull-left margin-top-sm margin-bottom-sm visible-xs">
+<div class="rating-static rating-49 margin-top-none pull-right margin-right-none"></div>
+<span class="pull-right font-22 bolder lt-grey pad-right-md border-right margin-right-md line-height-1">4.9</span>
+</div>
+<p class="visible-xs font-16 italic margin-none width-100 pull-left">1,192 Lifetime Reviews</p>
+<!-- end mobile rating-->
+<span class="black font-16" id="dealerAddress" itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress"><span itemprop="streetAddress">1110 E Broadway Ave</span>, <a class="black" href="/directory/75647/Chevrolet/" title="Chevrolet Dealers near Gladewater, TX"><span itemprop="addressLocality">Gladewater</span>, <span itemprop="addressRegion">Texas</span> <span itemprop="postalCode">75647</span></a><meta content="US" itemprop="addressCountry"/></span>
+<a class="hidden-xs font-14 orange-lt bolder letter-spacing-1 uppercase block margin-bottom-mdlg" href="#" onclick="getDirections(); recordEvent('Dealer-Profile', 'Directions_click', '23685', null, true);">Directions</a>
+<div class="font-14 hidden-xs">
+<div class="inline-block pad-right-md phone"><span class="bolder uppercase letter-spacing-1 black">Sales:</span> <span itemprop="telephone">(903) 374-0469</span></div>
+<div class="inline-block pad-right-md pad-left-md line-height-1 border-left-orange phone"><span class="bolder uppercase letter-spacing-1 black">Service:</span> <span itemprop="telephone">(903) 374-0470</span></div>
+<div class="inline-block pad-left-md line-height-1 border-left-orange phone"><span class="bolder uppercase letter-spacing-1 black">Parts:</span> <span itemprop="telephone">(903) 374-0471</span></div>
+<br/>
+</div>
+<div class="font-16 col-xs-10 margin-none pad-none">
+</div>
+<!-- MOBILE Hours section -->
+<div class="visible-xs dealer-hours">
+</div>
+</div>
+<!-- END MOBILE Hours section -->
+<!-- MOBILE nav section -->
+<div class="col-xs-12 pad-none margin-top-lg visible-xs overview-mobile-nav">
+<div class="col-xs-6 pad-left-none pad-right-sm margin-bottom-mdlg">
+<a class=" button-rounded-teal uppercase font-14 letter-spacing-1 mobile-link pad-none pad-top-sm pad-bottom-sm border-thick-light-teal" href="/sales/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-Employees-23685/#mobileLink" onclick="recordEvent('Dealer-Profile', 'Persistent_Employees_click', '23685', null, false);">Employees</a>
+</div>
+<div class="col-xs-6 pad-left-none pad-right-sm margin-bottom-mdlg">
+<a class="active button-rounded-teal uppercase font-14 letter-spacing-1 mobile-link pad-none pad-top-sm pad-bottom-sm border-thick-light-teal" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/#mobileLink" onclick="recordEvent('Dealer-Profile', 'Persistent_Reviews_click', '23685', null, false);">Reviews</a>
+</div>
+<div class="col-xs-6 pad-left-none pad-right-sm margin-bottom-mdlg">
+<a class=" button-rounded-teal uppercase font-14 letter-spacing-1 mobile-link pad-none pad-top-sm pad-bottom-sm border-thick-light-teal" href="/classifieds/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-cars-23685/#mobileLink" onclick="recordEvent('Dealer-Profile', 'Persistent_Inventory_click', '23685', null, false);">Inventory</a>
+</div>
+<div class="col-xs-6 pad-left-none pad-right-sm margin-bottom-mdlg">
+<a class="button-rounded-teal uppercase font-14 letter-spacing-1 mobile-link pad-top-sm pad-none pad-bottom-sm border-thick-light-teal" href="http://maps.apple.com/maps?daddr=1110 E Broadway Ave+Gladewater+TX" onclick="recordEvent('Dealer-Profile', 'Directions_click', '23685', null, true);">Directions</a>
+</div>
+<div class="col-xs-6 pad-left-none pad-right-sm margin-bottom-mdlg">
+<a class="button-rounded-teal uppercase font-14 letter-spacing-1 mobile-link pad-top-sm pad-none pad-bottom-sm border-thick-light-teal" href="#" onclick="toggleMobilePage('awardsDialog')">Awards</a>
+</div>
+<div class="col-xs-6 pad-left-none pad-right-sm margin-bottom-mdlg">
+<a class="button-rounded-teal uppercase font-14 letter-spacing-1 mobile-link pad-top-sm pad-none pad-bottom-sm border-thick-light-teal" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-review-23685/#photos">Amenities</a>
+</div>
+</div>
+<!-- END MOBILE nav section -->
+<a class="clear-fix pull-left block visible-xs button-rounded-white uppercase boldest font-14 letter-spacing-1 pad-top-sm pad-bottom-sm width-100 mobile-link margin-top-sm" href="tel:(903) 374-0469" onclick="clickToCallEvent();">Call (903) 374-0469</a>
+</div>
+<div class="col-xs-12 pad-none margin-top-lg text-center visible-xs">
+<div class="col-xs-12 pad-none" data-ad-id="51654" onclick="recordEvent('Dealer-Profile', 'Ad_click', '23685', null, false);">
+<a href="http://www.mckaig.net/" id="adId51654" onclick='recordMixpanelEvent("Leads And Referrals", {"Dealer Self Ad Clicks": "23685"}); window.open("http://www.mckaig.net/");return false;' target="_blank"><img src="http://cdn-user.dealerrater.com/ads/ads/260-542015104508AM.jpg" style="border-width: 0px; border-style: none;max-width:300px;max-height:90px;"/></a>
+</div>
+<a id="mobileLink"></a>
+<a class="clear-fix font-14 orange-lt bolder letter-spacing-1 uppercase block pad-top-md text-center" href="http://www.mckaig.net/" itemprop="url" onclick="viewDealerWebsiteEvent();" target="_blank">Visit Dealership Website</a>
+</div>
+</div>
+<div class="absolute-right text-right pad-top-lg pad-left-none margin-right-lg hidden-xs" itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+<h5 class="no-format boldest font-12 uppercase letter-spacing-1 black margin-none pad-bottom-sm">
+Excellent    </h5>
+<h5 class="no-format font-12 uppercase letter-spacing-1 black margin-none margin-bottom-sm"><span class="boldest">100%</span> Recommended</h5>
+<div class="pull-right margin-top-sm margin-bottom-sm rating-details">
+<div class="rating-static rating-49 margin-top-none pull-right margin-right-none"></div>
+<span class="pull-right font-22 bolder lt-grey pad-right-md border-right margin-right-md line-height-1">4.9</span>
+</div>
+<p class="font-16 italic margin-none clear-fix">1,192 Lifetime Reviews</p>
+<meta content="4.9" itemprop="ratingValue"/>
+<meta content="1192" itemprop="reviewCount"/>
+<meta content="5" itemprop="bestRating"/>
+<meta content="0" itemprop="worstRating"/>
+<!-- TABLET awards section -->
+<div class="col-xs-12 pad-none margin-top-md visible-sm">
+<img class="view-awards pointer" src="http://cdn-user.dealerrater.com/doty/2017/US/seal2/state/7-TX.png" width="95"/> <a class="font-16 orange-lt bolder letter-spacing-1 uppercase margin-top-md view-awards" href="#">View <span class="boldest">5</span> Awards</a>
+</div>
+<!-- END TABLET awards section -->
+</div>
+<div class="display-none border-all pad-md bg-white absolute arrow-right" id="rating-details">
+<div class="clearfix">
+        Customer Service
+        <div class="rating-static-indv rating-50 margin-none pull-right"></div>
+</div>
+<div class="clearfix">
+        Quality of Work
+        <div class="rating-static-indv rating-50 margin-none pull-right"></div>
+</div>
+<div class="clearfix">
+        Friendliness
+        <div class="rating-static-indv rating-50 margin-none pull-right"></div>
+</div>
+<div class="clearfix">
+        Pricing
+        <div class="rating-static-indv rating-48 margin-none pull-right"></div>
+</div>
+<div class="clearfix">
+        Overall Experience
+        <div class="rating-static-indv rating-50 margin-none pull-right"></div>
+</div>
+<div class="col-xs-12 pad-none line-height-125 margin-top-md">
+        A dealership's rating is calculated by averaging scores from reviews received in the past 24 months
+    </div>
+</div>
+</div>
+<div class="width-100 table pad-md hidden-xs">
+<div class="td pad-right-lg valign-top ad-column">
+<!-- === AD SPACE === -->
+<div class="col-xs-12 text-left pad-none bg-white border-all adspace text-center" data-ad-id="47704" onclick="recordEvent('Dealer-Profile', 'Ad_click', '23685', null, false);">
+<img alt="" height="250" id="n00000001" name="n00000001" src="https://cdn-user.dealerrater.com/ads/ads/260-926201442100PM.jpg" usemap="#m_00000001" width="300"/><map id="m_00000001" name="m_00000001">
+<area alt="" coords="47,239,339,280" href="http://mckaig.net/car-concierge/" shape="rect"/>
+<area alt="" coords="47,201,339,239" href="http://www.mckaigchevrolet.com/Service" shape="rect"/>
+<area alt="" coords="47,162,339,201" href="http://mckaig.net/free-oil-changes-life/" shape="rect"/>
+<area alt="" coords="47,126,339,162" href="http://mckaig.net/what-is-for-the-people-video/" shape="rect"/>
+<area alt="" coords="47,88,339,126" href="http://mckaig.net/rave-reviews/" shape="rect"/>
+<area alt="" coords="0,0,380,280" href="http://mckaig.net/" shape="rect"/>
+</map></div>
+<a class="clear-fix font-14 orange-lt bolder letter-spacing-1 uppercase block pad-top-md text-center" href="http://www.mckaig.net/" onclick="viewDealerWebsiteEvent();" target="_blank">Visit Dealership Website</a>
+</div>
+<div class="td pad-right-xxl pad-left-md valign-top pad-top-lg text-left about-us-column">
+<p class="font-18 about-us margin-bottom-none">McKaig Chevrolet Buick is A Dealer FOR the People! What makes us different? Why are we special? FOR The People Pledge:
+
+We are a Dealer FOR The People. That means we put our customers first, before everything else. We believe that everyone deserves to drive a nicer, newer car today. Our business is not selling cars. Our business is finding solutions to the everyday problems that keep most people stuck in a car they hate. We're on a mission to change the world by helping people get the car they want and deserve. Our goal is to make you a customer guest for Life!
+ Kent &amp; Mark Abernathy, "Brothers of Savings" 
+ FOR The People
+
+Reviewers Rank us #1 in East Texas
+Home of Non-Commissioned Sales Solution Specialists
+Se Habla Espanol
+Home of Free Oil Changes For Life
+
+Home of the Buyer's Bill of Rights!
+-Home of Free Oil Changes For Life!
+-Home of Non-Commission Sales Solution Staff! No Bullies in the Showroom!
+-Se Habla Espanol!</p>
+<a class="font-14 orange-lt bolder letter-spacing-1 uppercase block display-none" href="#" id="readMoreAbout">Read More</a>
+<a class="font-14 orange-lt bolder letter-spacing-1 uppercase block margin-top-lg" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-review-23685/#amenities" onclick="recordEvent('Dealer-Profile', 'View-Photos-Amenities_click', '23685', null, true);">
+View Photos &amp; Amenities                </a>
+<div class="hidden-xs dealer-hours">
+</div>
+</div>
+<div class="td text-center valign-top awards-column hidden-sm">
+<img class="view-awards pointer" src="http://cdn-user.dealerrater.com/doty/2017/US/seal2/state/7-TX.png" width="160"/>
+<a class="font-18 orange-lt bolder letter-spacing-1 uppercase block margin-top-md view-awards" href="#" onclick="recordEvent('Dealer-Profile', 'View-Awards-link_click', '23685', null, true);">View <span class="boldest">5</span> Awards</a>
+</div>
+<div class="td"></div>
+</div>
+<div class="col-xs-12 pad-none bg-grey-lt margin-top-lg margin-bottom-lg text-center review-page-nav box-shadow-bottom-extra-lt hidden-xs" id="link">
+<a class="black bolder font-14 letter-spacing-1 uppercase margin-right-xl inline-block pad-top-lg pad-left-lg pad-right-lg pad-bottom-md" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-review-23685/" onclick="recordEvent('Dealer-Profile', 'Persistent_Overview_click', '23685', null, false);">Overview</a>
+<a class=" black bolder font-14 margin-right-xl letter-spacing-1 uppercase inline-block pad-top-lg pad-bottom-md pad-left-lg pad-right-lg" href="/sales/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-Employees-23685/#link" onclick="recordEvent('Dealer-Profile', 'Persistent_Employees_click', '23685', null, false);">Employees</a>
+<a class="active black bolder font-14 letter-spacing-1 uppercase margin-right-xl inline-block pad-top-lg pad-left-lg pad-right-lg pad-bottom-md" href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/#link" onclick="recordEvent('Dealer-Profile', 'Persistent_Reviews_click', '23685', null, false);">Reviews (1192)</a>
+<a class=" black bolder font-14 letter-spacing-1 uppercase inline-block pad-top-lg pad-bottom-md pad-left-lg pad-right-lg" href="/classifieds/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-cars-23685/#link" onclick="recordEvent('Dealer-Profile', 'Persistent_Inventory_click', '23685', null, false);">Inventory (160)</a>
+</div>
+</div>
+<!--- AWARDS CONTENT -->
+<div class="col-xs-12 pad-top-lg pad-bottom-lg pad-left-lg pad-right-lg display-none" id="awardsDialog">
+<a class="close-dialog" href="#"></a>
+<p class="uppercase margin-top-none margin-bottom-lg font-20 boldest lt-grey letter-spacing-1 hidden-xs">McKaig Chevrolet Buick - A Dealer For The People Awards</p>
+<p class="uppercase margin-top-none margin-bottom-lg border-bottom-light pad-bottom-sm margin-left-sm margin-right-sm font-20 boldest lt-grey letter-spacing-1 visible-xs text-center">Awards</p>
+<div class="col-xs-12 pad-none" id="awardsWrapper">
+<div class="col-xs-12 pad-none">
+<div class="col-xs-6 col-sm-4 pad-none text-center margin-bottom-lg award"><img class="doty-award-image" height="195" src="http://cdn-user.dealerrater.com/doty/2017/US/seal2/state/7-TX.png"/></div>
+<div class="col-xs-6 col-sm-4 pad-none text-center margin-bottom-lg award"><img class="doty-award-image" height="195" src="http://cdn-user.dealerrater.com/doty/2015/US/seal2/state/7-TX.png"/></div>
+</div>
+<div class="col-xs-12 pad-none">
+<div class="col-xs-6 col-sm-5 pad-none text-center margin-bottom-lg award"><img class="csa-award-image" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/locales/en-US/csa/2017-seal.png" width="200"/></div>
+<div class="col-xs-6 col-sm-5 pad-none text-center margin-bottom-lg award"><img class="csa-award-image" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/locales/en-US/csa/2016-seal.png" width="200"/></div>
+<div class="col-xs-6 col-sm-5 pad-none text-center margin-bottom-lg award"><img class="csa-award-image" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/locales/en-US/csa/2015-seal.png" width="200"/></div>
+</div>
+</div>
+<div class="clear-fix"></div>
+</div>
+<!-- HOURS CONTENT-->
+<div class="col-xs-12 pad-top-lg pad-bottom-lg pad-left-lg pad-right-lg display-none" id="hoursDialog">
+<a class="close-dialog" href="#"></a>
+<p class="uppercase margin-none font-20 boldest lt-grey letter-spacing-1 hidden-xs">McKaig Chevrolet Buick - A Dealer For The People Hours</p>
+<p class="uppercase margin-top-none margin-bottom-sm border-bottom-light pad-bottom-sm margin-left-sm margin-right-sm font-20 boldest lt-grey letter-spacing-1 visible-xs text-center">Hours</p>
+<div class="col-xs-12 pad-none" id="hoursWrapper">
+<!-- hours -->
+<div class="col-xs-12 col-sm-6 hours-section pad-left-none pad-right-xl margin-bottom-md">
+<p class="bold uppercase letter-spacing-1 orange-lt margin-none pad-top-md">Sales/Showroom</p>
+<p class="margin-none font-16">
+<span>Monday</span> <span class="pull-right">
+                            8:00 AM
+                                - 6:00 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Tuesday</span> <span class="pull-right">
+                            8:00 AM
+                                - 6:00 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Wednesday</span> <span class="pull-right">
+                            8:00 AM
+                                - 6:00 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Thursday</span> <span class="pull-right">
+                            8:00 AM
+                                - 6:00 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Friday</span> <span class="pull-right">
+                            8:00 AM
+                                - 6:00 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Saturday</span> <span class="pull-right">
+                            9:00 AM
+                                - 6:00 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Sunday</span> <span class="pull-right">
+                            Closed
+                        </span>
+</p>
+</div>
+<div class="col-xs-12 col-sm-6 hours-section pad-left-none pad-right-xl margin-bottom-md">
+<p class="bold uppercase letter-spacing-1 orange-lt margin-none pad-top-md">Service</p>
+<p class="margin-none font-16">
+<span>Monday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Tuesday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Wednesday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Thursday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Friday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Saturday</span> <span class="pull-right">
+                            8:00 AM
+                                - 1:00 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Sunday</span> <span class="pull-right">
+                            Closed
+                        </span>
+</p>
+</div>
+<div class="col-xs-12 col-sm-6 hours-section pad-left-none pad-right-xl margin-bottom-md">
+<p class="bold uppercase letter-spacing-1 orange-lt margin-none pad-top-md">Parts</p>
+<p class="margin-none font-16">
+<span>Monday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Tuesday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Wednesday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Thursday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Friday</span> <span class="pull-right">
+                            7:30 AM
+                                - 5:30 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Saturday</span> <span class="pull-right">
+                            8:00 AM
+                                - 1:00 PM
+                        </span>
+</p>
+<p class="margin-none font-16">
+<span>Sunday</span> <span class="pull-right">
+                            Closed
+                        </span>
+</p>
+</div>
+</div>
+<div class="clear-fix"></div>
+</div>
+<style>
+    .ctaLink, .chatLink {
+        font-size: 14px !important;
+    }
+
+    .claim-dealer-tablet .td {
+        min-width: 250px;
+    }
+
+    #dealerLink {
+        -ms-border-bottom-right-radius: 0;
+        border-bottom-right-radius: 0;
+        -ms-border-top-right-radius: 0;
+        border-top-right-radius: 0;
+        border: 1px solid #00adc2;
+    }
+    #serviceLink {
+        -ms-border-bottom-left-radius: 0;
+        border-bottom-left-radius: 0;
+        -ms-border-top-left-radius: 0;
+        border-top-left-radius: 0;
+    }
+    #dealerLink:after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        width: 0;
+        height: 0;
+        border-left: solid 10px transparent;
+        border-right: solid 10px transparent;
+        border-top: solid 10px #00adc2;
+    }
+    #overview h5 {
+        font-size: 12px !important;
+        text-transform: uppercase !important;
+    }
+    .rating-static, .rating-static-indv {
+        background-image: url("http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/bg_star_rating_new_orange_lt.png");
+    }
+    #rating-details {
+        width: 245px;
+        z-index: 2;
+        top: 9px;
+        right: 190px;
+    }
+    #badge-tooltip {
+        position: absolute;
+        background: #ffffff;
+        border: 2px solid #00adc2;
+        -ms-border-radius: 20px;
+        border-radius: 20px;
+        padding: 10px;
+        width: 190px;
+        top: 140px;
+        left: -50px;
+    }
+
+    #badge-tooltip:after,  #badge-tooltip:before {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    #badge-tooltip:after {
+        border-bottom-color: #ffffff;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+
+    #badge-tooltip:before {
+        border-bottom-color: #00adc2;
+        border-width: 13px;
+        margin-left: -13px;
+    }
+    .about-us {
+        white-space: pre-line;
+        max-height: 100px;
+        overflow: hidden;
+    }
+    .awards-column {
+        width: 180px;
+    }
+    .claim-column {
+        width: 240px;
+    }
+    .border-left-orange {
+        border-left: 2px solid #fa7412;
+    }
+    #awardsDialog, #hoursDialog {
+        height: auto !important;
+        width: 100% !important;
+    }
+    #awardsWrapper {
+        max-height: 420px;
+        overflow-y: auto;
+    }
+    .review-page-nav a.active, #persistentNav .active {
+        border-bottom: 3px solid #00adc2;
+    }
+    #persistentNav{
+        position: fixed;
+        top: 0;
+        left:0;
+        z-index: 1001;
+    }
+    .persistentNavWrapper{
+        margin: auto;
+        max-width: 1024px !important;
+        clear: both;
+    }
+    #persistentNav a{
+        padding-bottom: 31px !important;
+    }
+    .wide-layout {
+        margin-top: -10px;
+    }
+    #persistentNav .wide-layout a {
+        padding-bottom: 12px !important;
+    }
+    .ad-column {
+        width: 315px;
+    }
+    .recommend-column {
+        width: 425px;
+    }
+    @media (max-width: 1100px) {
+        #badge-tooltip {
+            left: 0;
+        }
+        #badge-tooltip:after, #badge-tooltip:before {
+            left: 25%;
+        }
+    }
+    @media (max-width: 975px) {
+        .phone {
+            display: block;
+            border: 0;
+            padding: 0 !important;
+            line-height: 1.5em;
+        }
+        .about-us-column {
+            padding-right: 10px !important;
+            padding-top: 50px !important;
+        }
+        .recommend-tablet-column {
+            padding-top: 70px !important;
+        }
+    }
+    @media (max-width: 767px) {
+        #pageContainer, .section-container#reviewsSection {
+            padding: 0 !important;
+        }
+        .overview-section {
+            padding: 0 !important;
+            display: table;
+            width: 100%;
+        }
+        .warLink {
+            margin-top: 10px;
+            display: inline-block !important;
+            float: none !important;
+        }
+        .ctaLink {
+            display: table-cell;
+            vertical-align: middle;
+            -ms-border-radius: 0;
+            border-radius: 0;
+            padding: 10px 5px !important;
+            font-size: 12px !important;
+            border: 1px solid #fff !important;
+            float: none !important;
+            line-height: 1.25em !important;
+            height: 42px;
+        }
+
+        #serviceLink {
+            background: #cceff3;
+            color: #00adc2;
+        }
+        .star-icon {
+            display: inline !important;
+        }
+        #badge {
+            margin-top: 12px;
+        }
+        .badge-tooltip {
+            width: 65px;
+        }
+        #dealerName {
+            font-size: 20px !important;
+        }
+        #dealerAddress {
+            font-size: 14px !important;
+            display: block;
+            float: left;
+            clear: both;
+            margin-top: 10px;
+        }
+        .mobile-link {
+            font-size: 14px !important;
+        }
+        #awardsDialog {
+            padding: 0 !important;
+        }
+        #awardsWrapper {
+            max-height: none;
+            overflow: auto;
+        }
+        .doty-award-image{
+            height: 150px;
+        }
+        .csa-award-image{
+            width: 150px;
+        }
+        #hoursDialog {
+            padding: 0 10px !important;
+        }
+        .claim-dealer-tablet .td {
+            width: 100%;
+            display: block !important;
+        }
+        .claim-dealer-tablet .button-rounded-teal, .awards-mobile {
+            display: inline-block !important;
+        }
+        .chatLink.war {
+            float: none !important;
+            display: inline-block !important;
+        }
+        .overview-mobile-nav a.active {
+            background: #107dbf;
+            border-color: #cfe5f2;
+        }
+    }
+    @media (max-width: 550px) {
+        .ctaLink {
+            height: 60px;
+        }
+        .star-icon {
+            display: inline !important;
+            float: left;
+            padding-right: 2px;
+            padding-top: 2px;
+        }
+        .wrench-icon {
+            display: block;
+            float: left;
+            padding-right: 3px;
+            padding-top: 5px;
+        }
+        .review-btn-text {
+            width: 65px;
+            float: left;
+        }
+        .service-btn-text {
+            width: 60px;
+            float: left;
+        }
+    }
+</style>
+</div>
+<!-- reviews section -->
+<div class="col-xs-12 pad-none" id="reviews">
+<div class="col-xs-12 margin-top-md review-section pad-md pad-bottom-none">
+<div class="col-xs-12 pad-none">
+<h2 class="margin-top-none uppercase boldest font-20 dark-grey reviews-of-emp">
+                        1192 Reviews of McKaig Chevrolet Buick - A Dealer For The People
+                    </h2>
+<div class="col-xs-12 pad-none margin-bottom-md pad-bottom-mdlg border-bottom-light">
+<span class="sortByWrapper">
+<span class="uppercase lt-grey font-14 boldest letter-spacing-1 visible-sm visible-xs pull-left pad-top-md pad-right-sm">Sort by</span>
+<select class="rounder-sm font-18 border-all-light pad-sm" id="review-filter">
+<option value="ALL_REVIEWS">All Reviews</option>
+<option value="ONLY_SALES">Sales Reviews Only</option>
+<option value="ONLY_POSITIVE">Only Positive</option>
+<option value="ONLY_NEGATIVE">Only Negative</option>
+</select>
+</span>
+<a class="relative button-rounded-orange pad-left-xl pad-right-xl pad-top-sm pad-bottom-sm pull-right uppercase white font-14 letter-spacing-2 bolder line-height-150 chatLink war" href="/consumer/writereviews/23685?service=true&amp;source=drp">
+                            Write a review
+                        </a>
+</div>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3635368"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 12, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - USED</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"AWESOME EXPERIENCE"</h3>
+<span class="italic font-18 black">- spatti1954</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">I'm a 63 year old female and live in Chandler, Tx.,  the McKaig dealership is by far the best car buying experience I've ever had, thanks to Adrian, Jeriamy and Johnny. This whole team puts it together for an unbelievable deal, very professional and hospitable making sure all my questions and concerns were addressed. GREAT JOB guys, I love my new ride!
+
+Patricia Simmons</p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3635368">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/5fe7785fa5a8.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-273456" data-emp-id="273456" href="/sales/Adrian-Cortes-review-273456/">
+                                             Adrian Cortes
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/7c5ccb6362b5.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-303692" data-emp-id="303692" href="/sales/Jeriamy-Schumacher-review-303692/">
+                                             Jeriamy Schumacher
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/fb68a05f3aef.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-398170" data-emp-id="398170" href="/sales/Johnny-Ortiz-review-398170/">
+                                             Johnny Ortiz
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/users/susie12/83684db5-b281-46b5-b785-d011586b708f.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase emp-164175" data-emp-id="164175" href="/sales/Alisa-Cerney-review-164175/">
+                                             Alisa Cerney
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3635368.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3635368.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3635368.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3635368.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3635368); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3635368', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3635368', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3635368, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3635368">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3630505"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 10, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - NEW</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"Easy to do business with.  I felt very appreciated."</h3>
+<span class="italic font-18 black">- David</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">Pleasant experience for the whole transaction.  Sabrina went the extra mile to find the right pickup for me.  She is very knowledgeable about the inventory, terms, and product features.  Excellent attitude toward the dealership, products and the customer..  The whole transaction was a friendly, non pushy atmosphere.  I would go to McKaig first, the next time I want to purchase a Chevrolet.  I have visited other dealerships but the friendliness of McKaig  Chevrolet in Gladewater made the decisions easy.  </p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3630505">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/users/susie12/9abc2300-ca93-4f14-b053-d21e5b626291.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase emp-79248" data-emp-id="79248" href="/sales/Sabrina-Preiss-review-79248/">
+                                             Sabrina Preiss
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 font-14 pad-none pad-top-sm ">
+<span class="bold">Other Employees :</span>
+<span class="italic font-12">Preiss, Sabrina </span>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3630505.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3630505.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3630505.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3630505.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3630505); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3630505', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3630505', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3630505, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3630505">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3630012"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 10, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - USED</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"Best car buying experience."</h3>
+<span class="italic font-18 black">- Paul Small</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">They are a great group of people to work with. They know about there products and are committed to helping there customers. I have enjoyed purchasing my vehicle here.</p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3630012">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/users/susie12/3c69830d-934e-485b-8286-cb3ab7986ddb.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-181036" data-emp-id="181036" href="/sales/Charles-Phillips-review-181036/">
+                                             Charles Phillips
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/fb68a05f3aef.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase emp-398170" data-emp-id="398170" href="/sales/Johnny-Ortiz-review-398170/">
+                                             Johnny Ortiz
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3630012.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3630012.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3630012.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3630012.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3630012); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3630012', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3630012', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3630012, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3630012">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3625471"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 07, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - USED</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"They will do everything they can!"</h3>
+<span class="italic font-18 black">- Samudioe</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">I absolutely love McKaig! Although I wasn't able to get a vehicle, I appreciate that they tried everything they could! 
+Brittany let us know what was happening while we waited, what we needed, and how long they will keep our information. She was so patient and kind with my family and I. She really went above and beyond what was expected. It was the best experience that I've had at a dealership. </p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3625471">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 font-14 pad-none pad-top-sm ">
+<span class="italic font-12">Brittany Jackson </span>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3625471.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3625471.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3625471.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3625471.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3625471); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3625471', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3625471', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3625471, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3625471">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3618076"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 06, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - NEW</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"new car review"</h3>
+<span class="italic font-18 black">- croleyjesse</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">My name is Jesse I recently bought a new chevy cruise from McKaig chevy in Gladewater, Tx I was very pleased with the service I received. My salesman was Jason he was very friendly and helpful, he is also a U.S. Navy veteran thank you for your service to our great country, I really enjoyed my first new car purchase thanks to McKaig I will be back for sure to purchase my next vehicle.</p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3618076">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 font-14 pad-none pad-top-sm ">
+<span class="italic font-12">Jason </span>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3618076.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3618076.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3618076.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3618076.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3618076); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3618076', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3618076', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3618076, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3618076">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3604455"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 06, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - USED</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"Thank you Robin!!!"</h3>
+<span class="italic font-18 black">- Autumn Bentley</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">Hello I would like to thank Robin Wilkins for helping us get into a new car we came all the way from palestine to see a different vehicle that had sold but Robin still went above and beyond and worked with Jeriamy Svhmacher and Johnny Ortiz to find us a different one and get us into Robin Wilkins made our time worth waiting. THANK YOU once again. 
+
+From the Bentley Family!!!</p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3604455">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/7c5ccb6362b5.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-303692" data-emp-id="303692" href="/sales/Jeriamy-Schumacher-review-303692/">
+                                             Jeriamy Schumacher
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/fb68a05f3aef.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase emp-398170" data-emp-id="398170" href="/sales/Johnny-Ortiz-review-398170/">
+                                             Johnny Ortiz
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 font-14 pad-none pad-top-sm ">
+<span class="bold">Other Employees :</span>
+<span class="italic font-12">John Nayo, Robin Wilkins </span>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3604455.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3604455.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3604455.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3604455.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3604455); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3604455', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3604455', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3604455, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3604455">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3614817"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 03, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - USED</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"Great dealership, friendly staff"</h3>
+<span class="italic font-18 black">- Steph2892</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">This was my first time to actually buy a vehicle for myself, Charles Phillips and the staff were extremely helpful and got me into my new car! </p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3614817">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/users/susie12/3c69830d-934e-485b-8286-cb3ab7986ddb.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-181036" data-emp-id="181036" href="/sales/Charles-Phillips-review-181036/">
+                                             Charles Phillips
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/fb68a05f3aef.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-lg">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase emp-398170" data-emp-id="398170" href="/sales/Johnny-Ortiz-review-398170/">
+                                             Johnny Ortiz
+                                         </a>
+</div>
+</div>
+</div>
+<div class="col-xs-12 font-14 pad-none pad-top-sm ">
+<span class="bold">Other Employees :</span>
+<span class="italic font-12">Jeriamy Schumacher  </span>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3614817.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3614817.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3614817.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3614817.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3614817); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3614817', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3614817', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3614817, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3614817">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3613584"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 03, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SERVICE VISIT</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"The service was quick!"</h3>
+<span class="italic font-18 black">- hcrafts</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">I was able to get in and out of McKAIG in less than 30 minutes! Everyone was super nice and very professional, thank you. You are a blessing!</p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3613584">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/users/susie12/152607bd-b871-4a6a-93cf-51de1003f103.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-153667" data-emp-id="153667" href="/sales/Faye-Hinds-review-153667/">
+                                             Faye Hinds
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/a21b200039be.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-224479" data-emp-id="224479" href="/sales/Larry-Jones-review-224479/">
+                                             Larry Jones
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">4.0</span>
+<div class="rating-static rating-40 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/fc2701dea560.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase emp-398111" data-emp-id="398111" href="/sales/John-Mackey-review-398111/">
+                                             John Mackey
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">4.0</span>
+<div class="rating-static rating-40 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 font-14 pad-none pad-top-sm ">
+<span class="bold">Other Employees :</span>
+<span class="italic font-12">Aaron Abernathy </span>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3613584.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3613584.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3613584.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3613584.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3613584); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3613584', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3613584', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3613584, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3613584">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3612945"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 02, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-48 pull-right"></div>
+<div class="rating-static hidden-xs rating-48 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - NEW</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"Thanks Jason"</h3>
+<span class="italic font-18 black">- SilverSpark</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">My experience with McKaig Chevrolet will always be remember as one of the greatest  moments  for looking for a vehicle.  From start to finish everyone was so helpful, friendly, Professional staff. All had made my experience a  very lasting impression.  No pressure,  non pushy and most of all willing to help see me get into a vehicle.  With me having some financial obstacles reflecting they went out of the way to find a lender that would work with me and my current situation and the results paid off. not only did I get approve,  but  I drove home in a brand new 2017  vehicle.  So if there  is hope for me  there is definitely hope for the  next person that is in need of a vehicle.  Don't let that stand in your way  Thanks Jason for helping me I appreciate you and I intend to purchase my next vehicle here as well.</p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3612945">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-40 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/fb68a05f3aef.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase emp-398170" data-emp-id="398170" href="/sales/Johnny-Ortiz-review-398170/">
+                                             Johnny Ortiz
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 font-14 pad-none pad-top-sm ">
+<span class="bold">Other Employees :</span>
+<span class="italic font-12">Jason,  Summur </span>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3612945.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3612945.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3612945.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3612945.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3612945); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3612945', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3612945', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3612945, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3612945">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style>
+<div class="review-entry col-xs-12 text-left pad-none pad-top-lg border-bottom-teal-lt">
+<a name="r3610114"></a>
+<div class="col-xs-12 col-sm-3 pad-left-none text-center review-date margin-bottom-md">
+<div class="italic col-xs-6 col-sm-12 pad-none margin-none font-20">July 01, 2017</div>
+<div class="col-xs-6 col-sm-12 pad-none dealership-rating">
+<div class="rating-static visible-xs pad-none margin-none rating-50 pull-right"></div>
+<div class="rating-static hidden-xs rating-50 margin-center"></div>
+<div class="col-xs-12 hidden-xs pad-none uppercase font-12 bolder margin-top-sm letter-spacing-1 dr-grey">SALES VISIT - USED</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-9 pad-none review-wrapper">
+<!-- REVIEW TITLE, USER-->
+<div class="margin-bottom-sm line-height-150">
+<h3 class="no-format inline italic-bolder font-20 dark-grey">"Excellent "</h3>
+<span class="italic font-18 black">- xochitlley</span>
+</div>
+<!-- REVIEW BODY -->
+<div class="tr margin-top-md">
+<div class="td text-left valign-top ">
+<p class="font-16 review-content margin-bottom-none line-height-25">McKaig was the first place I went to to buy my first car. I chose to come here after hearing an employee rave about how friendly and helpful they were in helping her find a car that would fit her budget. It was everything she told me it would be and more! Brittany was extremely helpful and did everything she could to find the right car within my budget. I've already recommended this place to all my friends and family, it's more than worth the 45 minute drive there to me. Never did I think buying a car would be so pleasant but McKaig and Brittany have shown me it can be!</p>
+<a class="read-more-toggle pointer orange-lt uppercase bolder font-14 line-height-25 letter-spacing-1 block margin-bottom-md" id="3610114">Read More</a>
+</div>
+</div>
+<!-- REVIEW RATINGS - ALL -->
+<div class="pull-left pad-left-md pad-right-md bg-grey-lt margin-bottom-md review-ratings-all review-hide">
+<!-- REVIEW RATING - CUSTOMER SERVICE -->
+<div class="table width-100 pad-left-none pad-right-none margin-bottom-md">
+<div class="tr">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Customer Service</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - QUALITY OF WORK -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Quality of Work</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - FRIENDLINESS -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Friendliness</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - PRICING -->
+<div class="tr margin-bottom-md">
+<div class="bold font-12 uppercase lt-grey letter-spacing-1 td">Pricing</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - EXPERIENCE -->
+<div class="tr margin-bottom-md">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Overall Experience</div>
+<div class="rating-static-indv rating-50 margin-top-none td"></div>
+</div>
+<!-- REVIEW RATING - RECOMMEND DEALER -->
+<div class="tr">
+<div class="td bold font-12 uppercase lt-grey letter-spacing-1">Recommend Dealer</div>
+<div class="td uppercase boldest font-12">
+                Yes
+            </div>
+</div>
+</div>
+</div>
+<!-- EMPLOYEE SECTION -->
+<div class="clear-fix margin-top-sm">
+<div class="bold font-12 col-xs-12 lt-grey pad-left-none employees-wrapper">
+<div class="letter-spacing-1 uppercase bolder black">Employees Worked With </div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/fb68a05f3aef.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase margin-right-sm emp-398170" data-emp-id="398170" href="/sales/Johnny-Ortiz-review-398170/">
+                                             Johnny Ortiz
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 col-sm-6 col-md-4 pad-left-none pad-top-sm pad-bottom-sm review-employee">
+<div class="table">
+<div class="td square-image employee-image" style="background-image: url(http://cdn-user.dealerrater.com/images/users/susie12/62f718ea-047f-4ef7-8500-a343378cf632.jpg)"></div>
+<div class="td valign-bottom pad-left-md pad-top-none pad-bottom-none">
+<a class="pull-left line-height-1 letter-spacing-1 bold tagged-emp font-12 teal uppercase emp-2942" data-emp-id="2942" href="/sales/Mark-Abernathy-review-2942/">
+                                             Mark Abernathy
+                                         </a>
+<div class="col-xs-12 pad-none margin-none pad-top-sm">
+<div class="relative employee-rating-badge-sm">
+<div class="col-xs-12 pad-none">
+<span class=" pull-left font-14 boldest lt-grey line-height-1 pad-right-sm margin-right-sm border-right">5.0</span>
+<div class="rating-static rating-50 margin-top-none pull-left"></div>
+</div>
+<div class="employee-rating-tooltip bg-white border-all absolute">
+        Employee Rating is a new feature allowing consumers to rate their experience with individual dealership employees.
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 font-14 pad-none pad-top-sm ">
+<span class="bold">Other Employees :</span>
+<span class="italic font-12">Brittany Jackson </span>
+</div>
+</div>
+</div>
+<!-- SOCIAL MEDIA AND REVIEW ACTIONS -->
+<div class="col-xs-12 pad-none review-hide margin-top-lg">
+<div class="pull-left">
+<a href="https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3610114.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People" onclick="window.open('https://twitter.com/intent/tweet?url=http://www.dealerrater.com/dealer/review/3610114.aspx&amp;via=dealerrater&amp;text=Check+out+the+latest+review+on+McKaig+Chevrolet+Buick+-+A+Dealer+For+The+People', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Twitter"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_twitter_sm.png"/></a>
+<a href="http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3610114.aspx" onclick="window.open('http://www.facebook.com/share.php?u=http://www.dealerrater.com/dealer/review/3610114.aspx', 'sharer', 'toolbar=0,status=0,width=750,height=500');return false;" rel="nofollow" target="_blank" title="Facebook"><img class="align-bottom" height="20" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_facebook_sm.png"/></a>
+</div>
+<div class="pull-left margin-left-md">
+<a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="javascript:window.reportReview(3610114); return false;">Report</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/respond.aspx?dealerId=23685&amp;commentId=3610114', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Respond</a> |
+        <a class="bold font-12 uppercase letter-spacing-1 orange-lt" href="#" onclick="window.open('/dealer/print.aspx?dealerId=23685&amp;commentId=3610114', 'report', 'toolbar=no,scrollbars=yes,location=no,width=575,height=465,resizable=yes'); return false;">Print</a>
+</div>
+</div>
+<!-- PUBLIC MESSAGES -->
+<!-- WAS HELPFUL SECTION -->
+<div class="col-xs-12 margin-bottom-lg">
+<div class="pull-right">
+<a class="button-rounded-blue-border uppercase letter-spacing-1 helpful-button pull-right pad-top-sm pad-bottom-sm pad-left-md pad-right-md font-12" href="#" onclick="javascript:MarkReviewHelpful(3610114, this); return false;">
+<img class="pull-left margin-right-sm" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-thumbsup.png"/> Helpful <span class="helpful-count display-none" id="helpful_count_3610114">0</span></a>
+</div>
+</div>
+</div>
+</div>
+<style>
+    @media (max-width: 767px) {
+        .public-messages {
+            border-top: none !important;
+            margin-left: 0 !important;
+            margin-top: 5px !important;
+            padding-top: 0 !important;
+        }
+    }
+</style> </div>
+</div>
+</div>
+<div class="col-xs-12 pad-none text-center pager-section pad-left-md pad-right-md pad-bottom-lg">
+<div class="sliding_pagination clearfix"><div class="page_container"><div class="page_active prev page" onclick="javascript:document.location.href='/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page1/?filter=ALL_REVIEWS#link';"><a href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page1/?filter=ALL_REVIEWS#link" rel="prev">&lt; prev</a></div><div class="page_active page" onclick="javascript:document.location.href='/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page1/?filter=ALL_REVIEWS#link';"><a href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page1/?filter=ALL_REVIEWS#link">1</a></div><div class="page_inactive page_current page">2</div><div class="page_active page" onclick="javascript:document.location.href='/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page3/?filter=ALL_REVIEWS#link';"><a href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page3/?filter=ALL_REVIEWS#link">3</a></div><div class="ellipsis">...</div><div class="page_active page" onclick="javascript:document.location.href='/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page120/?filter=ALL_REVIEWS#link';"><a href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page120/?filter=ALL_REVIEWS#link">120</a></div><div class="page_active next page" onclick="javascript:document.location.href='/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page3/?filter=ALL_REVIEWS#link';"><a href="/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/page3/?filter=ALL_REVIEWS#link" rel="next">next &gt;</a></div></div><div class="label">11 - 20 of 1,192 results</div></div>
+</div>
+</div>
+</div>
+<div class="dp-dialog-report display-none" id="dialog-report" title="Report Review">
+<form action="/json/reviews/report" id="report_form" method="post"><input data-val="true" data-val-number="The field ReviewId must be a number." data-val-required="Review is required." id="ReviewId" name="ReviewId" type="hidden" value="0"> <p class="margin-top-md">
+<label>Reason for reporting the review: </label>
+<select data-val="true" data-val-required="Reason is required." id="Reason" name="Reason"><option value="">Select...</option>
+<option value="2">Duplicate Review</option>
+<option value="3">Former Employee</option>
+<option value="4">Fraudulent Review</option>
+<option value="5">Incorrect Dealer Page</option>
+<option value="7">Inappropriate Content</option>
+<option value="6">Other</option>
+</select>
+<span class="field-validation-valid" data-valmsg-for="Reason" data-valmsg-replace="true"></span>
+</p>
+<label class="font-15 bold margin-top-lg margin-bottom-sm" name="-">
+        Please state your concerns regarding this review.<br/>
+        Please be as descriptive as possible.
+      </label>
+<label class="font-15 bold margin-top-lg margin-bottom-sm display:none" name="_1">We ask that reviewers read your private response within 5 days. This is a measure put in place to help identify fraudulent posts on the site, and in some cases we may determine that the review is not subject to removal even when the reviewer has not read your response.</label>
+<label class="font-15 bold margin-top-lg margin-bottom-sm display:none" name="_2">Which review do you believe this to be a duplicate of? Please provide the screen name, date, etc.</label>
+<label class="font-15 bold margin-top-lg margin-bottom-sm display:none" name="_3">Please provide any identifying information that you have regarding the former employee that you believe wrote the review – full name, email, social media links, anything that will help us research a connection between the review and that person.</label>
+<label class="font-15 bold margin-top-lg margin-bottom-sm display:none" name="_4">Please let us know what leads you to believe that this review was posted fraudulently.</label>
+<label class="font-15 bold margin-top-lg margin-bottom-sm display:none" name="_5">Which dealership do you believe this review was meant for, and what leads you to believe the review was posted to the incorrect page?</label>
+<label class="font-15 bold margin-top-lg margin-bottom-sm display:none" name="_6">Please let us know what leads you to believe that this review should be removed from the page.</label>
+<label class="font-15 bold margin-top-lg margin-bottom-sm display:none" name="_7">Please provide the exact content of the review that you feel is inappropriate.</label>
+<textarea class="width-100 pad-sm regular font-14" cols="20" data-val="true" data-val-length="The message can be no more than 2000 characters." data-val-length-max="2000" data-val-required="Message is required." id="report-message" name="Message" rows="">
+</textarea><span class="field-validation-valid" data-valmsg-for="Message" data-valmsg-replace="true"></span> <p class="margin-top-lg margin-top-none">
+<label>Your email address: </label>
+<input class="border-all-light" data-val="true" data-val-email="Please input a valid email address." data-val-required="Email is required" id="EmailAddress" name="EmailAddress" type="email" value=""> <span class="field-validation-valid" data-valmsg-for="EmailAddress" data-valmsg-replace="true"></span>
+</input></p>
+<a class="inline-block pull-left hidden-xs hidden-sm button-rounded-white uppercase pad-top-sm pad-bottom-sm pad-left-md pad-right-sm letter-spacing-1" href="https://dealerrater.uservoice.com/knowledgebase/articles/916620-reasons-for-reporting-a-review" target="_blank">Need some help <span class="glyphicon glyphicon-question-sign orange-lt font-18 valign-top"></span></a>
+<div class="ui-dialog-buttonset pull-right">
+<button onclick="closeReport();return false;">Cancel</button>
+<button class="submitReport" onclick="submitReport(); return false;">Submit</button>
+</div>
+</input></form></div>
+<div class="display-none" id="dialog_reportReview_in_progress" style="display:none" title="Please wait...">
+<p class="text-center pad-top-lg pad-left-lg pad-right-lg"><img height="64" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/loaders/spinner_32x32.gif" width="64"/></p>
+</div>
+<style>
+    #dialog-report{
+        width: 100% !important;
+    }
+
+    #dialog-report label[name^=_] {
+      display: none;
+    }
+
+    .ui-dialog.report-dialog {
+        border: none;
+        -ms-border-radius: 2px;
+        border-radius: 2px;
+        background: #f3f3f3;
+        padding: 0;
+    }
+
+    .ui-dialog.report-dialog .ui-dialog-titlebar {
+        background: #25347B;
+        color: #fff;
+        -ms-border-radius: 0;
+        border-radius: 0;
+        font-size: 16px;
+        font-family: MuseoSans-500 !important;
+        padding: 8px 6px;
+        height: 40px;
+        vertical-align: top;
+    }
+
+
+    .ui-dialog.report-dialog .ui-dialog-buttonset button {
+        background-color: transparent;
+        border: none;
+        -webkit-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+        color: #25347B;
+        font-family: MuseoSans-500 !important;
+        font-size: 13px;
+        text-decoration: underline;
+        padding-right: 30px;
+    }
+
+    .ui-dialog.report-dialog .ui-dialog-buttonset button.submitReport {
+        background-color: #E15725;
+        color: #fff !important;
+        font-family: MuseoSans-500 !important;
+        font-size: 13px;
+        border: none;
+        padding: 10px 20px;
+        -ms-border-radius: 2px;
+        display: inline-block;
+        text-align: center;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        text-decoration: none;
+    }
+
+    .ui-dialog.report-dialog .ui-widget-header .ui-icon-closethick {
+        background: url(http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_close_x_white.png) no-repeat;
+        -ms-background-size: cover;
+        background-size: cover;
+    }
+
+    .ui-dialog.report-dialog .ui-dialog-titlebar-close{
+        top: 5px;
+        right: 10px;
+    }
+
+    #report_form label{
+        font-size: 15px;
+        font-family: MuseoSans-500;
+        font-weight: normal;
+    }
+
+     #report_form select, #report_form input{
+         padding: 5px;
+         font-size: 15px;
+         font-family: MuseoSans-300;
+         width: 250px;
+         margin-left: 15px;
+     }
+
+     .ui-dialog.report-dialog .ui-dialog-buttonpane{
+         border-top: none;
+         margin-top: 0;
+         padding-top: 0;
+     }
+
+    #dialog_reportReview_in_progress{
+        width: 90% !important;
+        height: 100% !important;
+        padding-left: 5%;
+        padding-right: 5%;
+        top: -25px;
+        padding-bottom: 0;
+        margin: auto;
+    }
+
+     @media (max-width: 767px){
+        .ui-dialog.report-dialog {
+            width: 100% !important;
+            left: 0;
+            background: #fff;
+            position: absolute !important;
+            overflow-y: auto !important;
+        }
+        #report_form select, #report_form input{
+            margin-left: 0;
+        }
+
+        #dialog_reportReview_in_progress{
+            padding-top: 20px;
+        }
+     }
+</style>
+<div class="dp-dialog-success display-none" id="dialog-report-submitted" title="Report Submitted">
+<p>The report has been submitted to DealerRater support.  To view the status of the report at any time, save <a class="orange font-13 bold underline" href="https://www.dealerrater.com/report/index.aspx" target="_blank">this link.</a>
+</p>
+</div>
+<div id="dialog_lotshot_popup">
+<img style="display: block; margin: 5px auto; max-width: 500px; max-height: 465px;"/>
+</div>
+<div class="table fill-height text-center" id="mobile-lotshot">
+<div class="td col-xs-12 bg-white border-all pad-none">
+<button class="bolder dark-grey font-14 bg-white pad-sm border-all uppercase pull-left margin-sm pointer" onclick="toggleLotShotPage()">
+            &lt; BACK
+        </button>
+<div class="margin-top-sm pad-lg" id="mobile-lotshot-image"></div>
+</div>
+</div>
+<style>    
+    .square-image {
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        -ms-background-size: cover;
+        background-size: cover;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+    .review-employee {
+        cursor: pointer
+    }
+    .employee-image {
+        min-width: 51px;
+        border: 1px solid #05aec1;
+    }
+
+    .section-container {
+        display: block;
+    }
+
+    #contentInner {
+        background: #ffffff !important;
+    }
+    footer {
+        clear: both;
+    }
+    #mainContainer {
+        background: #fff !important;
+    }
+    
+    @media (max-width: 975px){
+         .employees-wrapper{
+            max-width: 100%;
+        }
+    }   
+
+    @media (max-width: 767px){
+        #reviews .chatLink {
+        float: right !important;
+        display: inline-block !important;
+        }
+
+        #reviews .button-rounded-orange {
+            padding: 5px 25px !important;
+            margin-top: 32px;
+        }
+        .sortByWrapper {
+            float: left;
+            display: block;
+        }
+        .sortByWrapper span {
+            display: block;
+            float: none !important;
+        }
+       
+    }
+        
+    @media (max-width: 430px) {
+       #reviews .button-rounded-orange {
+           float: left !important;
+            margin-top: 10px;
+            clear: both;
+            display: block !important;
+        }
+    }
+
+    @media (max-width: 480px) and (orientation: landscape)
+        {
+            #mobile-lotshot
+            {
+                overflow-y: auto;
+            }
+            /* #mobile-lotshot-image{
+                max-height: 180px !important;
+                max-width: 380px;
+                margin-left:auto;
+                margin-right:auto;
+            }*/
+        }
+
+
+        #mobile-lotshot-image
+        {
+            max-height: inherit !important;
+            max-width: 100%;
+            width: auto;
+            height: auto;
+            padding: 10px;
+            background: #fff;
+            margin-top: 10px;
+        }
+
+        #mobile-lotshot
+        {
+            display: none;
+            position: fixed;
+            top: 45px;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100% !important;
+            padding: 10px !important;
+            background: #ccc;
+        }
+
+
+</style>
+</div>
+</content>
+<!-- FOOTER -->
+<footer class="fill-width theme-color-5 font-16 ">
+<div id="footerContainer">
+<div class="col-xs-12 pad-bottom-lg text-left ">
+<div class="col-xs-3"><a class="uppercase white bold" href="http://www.dealerrater.com/" title="Home">Home</a></div>
+<div class="col-xs-3"><a class="uppercase white bold" href="/consumer/company" title="About Us">About Us</a></div>
+<div class="col-xs-3"><a class="uppercase white bold" href="/consumer/company/careers" title="Careers">Careers</a></div>
+<div class="col-xs-3"><a class="uppercase white bold" href="/consumer/company/contact-us" title="Contact Us">Contact Us</a></div>
+<div class="col-xs-3"><a class="uppercase white bold" href="http://www.dealerrater.com/info/tou/" title="Terms of Use">Terms of Use</a></div>
+<div class="col-xs-3"><a class="uppercase white bold" href="http://www.dealerrater.com/info/privacy/" title="Privacy Policy">Privacy Policy</a></div>
+<div class="col-xs-3"><a class="uppercase white bold" href="https://dealerrater.uservoice.com/knowledgebase/articles/844902-dealerrater-frequently-asked-questions" title="FAQ">FAQ</a></div>
+<div class="col-xs-3"><a class="uppercase white bold" href="http://www.dealerrater.com/info/community/" title="Community Guidelines">Community Guidelines</a></div>
+</div>
+<div class="col-xs-12 pad-bottom-lg">
+<div class="col-sm-6 pad-bottom-sm pad-right-xl">Copyright 2017 DR Media Holdings, LLC</div>
+<div class="col-sm-6 hidden-sm hidden-xs pad-bottom-sm text-right ">
+<span class="pad-right-md">Can't find what you're looking for?</span>
+<input autocomplete="off" class="footer-search-input input-sm search-input border black" id="footerAutoComplete" name="Search" placeholder="Search" type="text"/>
+<a class="relative" href="#" onclick="location.href='/search/?q=' + escape($('.footer-search-input').val().trim());"><img alt="Search" class="footer-search-submit absolute" height="17" src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon_search_gray.png"/></a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<!-- scripts down here to improve website rendering performance -->
+<script src="http://www.dealerrater.com/ncdn/bundle/u/95.20170811.9/ResponsiveScriptBundle.bundle?v=lMDv6HWy94E58iRn8EW_KfhG6aK055-tIs_otcWuFnI1"></script>
+<style type="text/css">
+    .dr-captcha-dialog {
+        width: 100% !important;
+        display: none;
+    }
+</style>
+<script async="" defer="" src="https://www.google.com/recaptcha/api.js?onload=GoogleCaptcha_onCaptchaLoad&amp;render=explicit">
+</script>
+<script type="text/javascript">
+    
+    function GoogleCaptchaInstance(siteKey, containerId, onCaptchaResult, theme) {
+        
+        var options = {
+            widgetId: null,
+            siteKey: siteKey,
+            containerId: containerId,
+            onCaptchaResult: onCaptchaResult,
+            theme: theme
+        };
+
+        
+        options.widgetId = grecaptcha.render(options.containerId, {
+            'sitekey': options.siteKey,
+            'callback': options.onCaptchaResult,
+            'theme': options.theme
+        });
+
+        
+
+        
+        this.reset = function () {
+            grecaptcha.reset(options.widgetId);
+        };
+
+        
+        this.result = function () {
+            return grecaptcha.getResponse(options.widgetId);
+        };
+    }
+
+    var GoogleCaptcha_onCaptchaLoad = function () {
+        // Widget loaded, call Render operations
+        GoogleCaptcha.onReady();
+    };
+
+    // Google Captcha factory for creating instances
+    var GoogleCaptcha = (function () {
+        // Private members
+        var siteKey = "6LcGWBcTAAAAAGq4Xqv08tUxBU8fhsKYUSBJFHX4";
+        var captchaInstances = {};
+
+        // Public methods
+        return {
+            create: function (containerId, onCaptchaResult, theme) {
+                
+                if (captchaInstances[containerId] == null)
+                    captchaInstances[containerId] = new GoogleCaptchaInstance(siteKey, containerId, onCaptchaResult, theme);
+                return captchaInstances[containerId];
+            },
+            onReady: function() {}
+        };
+    })();
+
+    
+    GoogleCaptcha.ShowCaptchaDialog = function (options) {
+        
+        options = options || { instanceId: 0, success: function(response) {}, failure: function() {}, title: "" };
+        
+        var dialogId = 'captcha-dialog-'+options.instanceId;
+        var containerId = 'captcha-container-'+options.instanceId;
+        var $dialogDiv = $('#' + dialogId);
+        var $containerDiv = $('#' + containerId);
+        
+        
+        if ($dialogDiv.length === 0) {
+            $dialogDiv = $('<div/>');
+            $dialogDiv.attr('id', dialogId);
+            $dialogDiv.attr('title', options.title);
+            $dialogDiv.addClass('dr-captcha-dialog');
+
+            $('body').append($dialogDiv);
+
+            
+            var $captchaCaption = $('<div/>');
+            $captchaCaption.text("One last step! Verify you're a human.");
+            $captchaCaption.addClass('font-16');
+            $captchaCaption.addClass('bolder');
+            $captchaCaption.addClass('italic');
+            $captchaCaption.addClass('pad-bottom-md');
+
+            $dialogDiv.append($captchaCaption);
+        }
+
+        
+        if ($containerDiv.length === 0) {
+            $containerDiv = $('<div/>').attr('id', containerId);
+            $dialogDiv.append($containerDiv);
+        }
+
+        // create captcha & setup callbacks
+        var dialogCaptcha = GoogleCaptcha.create(containerId, function(result) {
+            $containerDiv.removeClass('input-validation-error');
+
+            // Invoke callbacks
+            if (result != null && $.trim(result).length > 0) {
+                options.success(result);
+                $dialogDiv.dialog('close');
+            } else {
+                $containerDiv.addClass('input-validation-error');
+            }
+        });
+
+        
+        $dialogDiv.dialog({
+            modal: true,
+            resizeable: false,
+            autoOpen: true,
+            width: 360,
+            height: 200,
+            title: options.title,
+            dialogClass: 'dr-dialog contact-dialog',
+            close: function() {
+                
+                dialogCaptcha.reset();
+            }
+        });
+    }
+</script>
+<script>
+    var pageScrolled = false;
+
+    $(document).ready(function () {
+
+        var jsonUrl = '/json/dealer/hours';
+        $.ajax({
+            url: jsonUrl,
+            type: "GET",
+            cache: false,
+            data: { dealerId: 23685, hoursType: 'SALES' }
+        }).done(function(partialViewResult) {
+            $(".dealer-hours").empty().append(partialViewResult);            
+        });
+
+        // on hover of rating, show rating details
+        $(".rating-details").hover(function () {
+            $("#rating-details").toggle();
+            return false;
+        });
+
+        // GOOGLE ANALYTICS
+        if ($("#serviceLink").length > 0)
+        {
+            recordEvent('Dealer-Profile', 'Service-Center-tab_display', '23685', null, true);
+        }
+
+        // awards dialog
+        // tablet / desktop awards dialog click
+        $(".view-awards").click(function () {
+            var awardWidth = 685;
+            if ($(".award").length == 1) {
+                awardWidth = 300;
+            }
+            else if ($(".award").length == 2) {
+                awardWidth = 450;
+            }
+
+            // create and open awards dialog
+            $("#awardsDialog").dialog({
+                resizable: false,
+                modal: true,
+                width: awardWidth,
+                autoOpen: true,
+                dialogClass: "dr-dialog-wide dialog-gray",
+                open: function () {
+                    // click anywhere outside the  map dialog, close it
+                    $(".ui-widget-overlay, #awardsDialog .close-dialog").click(function (e) {
+                        $("#awardsDialog").dialog("close");
+                    });
+                },
+                close: function () {
+                    $("#awardsDialog").dialog("destroy");
+                }
+            });
+            return false;
+        });
+            recordEvent('Dealer-Profile', 'Certified-Dealer_display', '23685', null, true);
+        $(".tagged-emp").click(function () {
+            var empId = $(this).attr("data-emp-id");
+            recordEvent('Dealer-Profile', 'Tagged-Employee_Reviews_click', empId, null, false);
+        });
+
+            
+        // on hover of badge image, show tooltip
+        $(".badge-tooltip").hover(function () {
+            $("#badge-tooltip").toggle();
+            return false;
+        });
+
+        if ($(".about-us").height() >= 100) {
+            $("#readMoreAbout").show();
+        }
+
+        $("#readMoreAbout").click(function () {
+            if ($(".about-us").css("max-height") == "none") {
+                $(".about-us").css("max-height", "100px");
+                $("#readMoreAbout").html("Read More");
+            } else {
+                $(".about-us").css("max-height", "none");
+                $("#readMoreAbout").html("Read Less");
+            }
+            recordEvent('Dealer-Profile', 'Description-Read-More_click', '23685', null, true);
+            return false;
+        });
+
+
+
+        // desktop / tablet hours dialog
+        $(document).on('click', '.hidden-xs .view-hours', function () {
+            // create and open hours dialog
+            $("#hoursDialog").dialog({
+                resizable: false,
+                modal: true,
+                width: 685,
+                autoOpen: true,
+                dialogClass: "dr-dialog-wide dialog-gray",
+                open: function () {
+                    // click anywhere outside the  map dialog, close it
+                    $(".ui-widget-overlay, #hoursDialog .close-dialog").click(function (e) {
+                        $("#hoursDialog").dialog("close");
+                    });
+                },
+                close: function () {
+                    $("#hoursDialog").dialog("destroy");
+                }
+            });
+            return false;
+        });
+
+        // mobile hours dialog
+        $(document).on('click', '.visible-xs .view-hours', function () {
+            toggleMobilePage('hoursDialog');
+            return false;
+        });
+
+        // persistent nav
+        var reviewPageNavTop = $('.review-page-nav').offset().top + 30;
+
+        $(window).scroll(function () {
+            if (pageScrolled) {
+                if ($(".visible-xs").css("display") != "block") {
+                    if ($(window).scrollTop() > reviewPageNavTop) {
+                        $('#persistentNav').slideDown();
+                    } else {
+                        $('#persistentNav').slideUp();;
+                    }
+                } else {
+                    if ($(window).scrollTop() > reviewPageNavTop) {
+                        $('#persistentNav').css("position", "fixed");
+                        $('#persistentNav').css("top", "0");
+                        $('#persistentNav').css("left", "0");
+                        $('#persistentNav').css("z-index", "1001");
+                    } else {
+                        $('#persistentNav').css("position", "relative");
+                        $('#persistentNav').css("z-index", "auto");
+                    }
+
+                }
+            }
+            pageScrolled = true;
+        });
+
+    });
+
+    function toggleMobilePage(divName) {
+        $(".mobile-hide").toggle();
+        $("#mobileBack").toggle();
+        if (($("#hoursDialog").css("display") == "block") || (divName == "hoursDialog")) {
+            $("#hoursDialog").toggle();
+        }
+        else if (($("#awardsDialog").css("display") == "block") || (divName == "awardsDialog")) {
+            $("#awardsDialog").toggle();
+        }
+    }
+
+    function clickToCallEvent() {
+        window.recordEvent('Click_to_Call', 'Dealer_Profile_Sales_click', '23685', 1, false);
+        window.recordMixpanelEvent("Leads And Referrals", { "Dealer Profile Click-to-Call": '23685' });
+    }
+
+    function viewDealerWebsiteEvent() {
+        window.recordEvent('Dealer-Profile', 'Visit-Dealer-link_click', '23685', null, false);
+        window.recordMixpanelEvent("Leads And Referrals", { "View Dealer Website": '23685' });
+    }
+
+</script>
+<!-- DIRECTIONS DIALOG -->
+<div class="pad-bottom-lg fluid-scroll" id="directionsPopup" style="display: none;">
+<a class="close-dialog" href="#"></a>
+<div class="col-xs-12 pad-none font-24 orange-lt bolder text-center">
+        Map and Directions to McKaig Chevrolet Buick - A Dealer For The People
+    </div>
+<div class="col-xs-12 pad-none" id="directionsWrapper">
+<div class="col-xs-12 pad-none margin-top-mdlg">
+<div id="map-canvas"></div>
+<div class="col-xs-12 font-18 pad-none bolder pad-top-mdlg pad-bottom-sm display-none" id="map-summary">
+<div class="pull-left" id="mapSummary"></div>
+<div class="pull-right bg-orange-lt pointer margin-left-lg" id="mapPrint"><img src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-directions-print.png" width="30"/></div>
+<div class="pull-right bg-orange-lt pointer margin-right-md margin-left-lg" id="mapReverse"><img src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-directions-reverse.png" width="30"/></div>
+<div class="travel-mode pull-right bg-orange-lt margin-right-md" id="walking"><img src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-directions-walk.png" width="30"/></div>
+<div class="travel-mode pull-right bg-orange-lt margin-right-md" id="bicycling"><img src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-directions-bike.png" width="30"/></div>
+<div class="travel-mode pull-right bg-orange-lt margin-right-md" id="transit"><img src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-directions-train.png" width="30"/></div>
+<div class="active travel-mode pull-right bg-orange-lt margin-right-md" id="driving"><img src="http://www.dealerrater.com/ncdn/u/95.20170811.9/Graphics/icons/icon-directions-car.png" width="30"/></div>
+</div>
+<div class="clear-fix"></div>
+</div>
+<!--Placeholder for turn by turn directions -->
+<div class="col-xs-12 display-none pad-none" id="directions-panel">
+</div>
+<div class="col-xs-12 pad-none margin-top-lg margin-bottom-lg" id="get-directions">
+<p class="font-14 uppercase bold letter-spacing-1 margin-bottom-none">Enter your starting address</p>
+<input class="pad-sm font-16 line-height-150 rounded border-all regular pull-left" id="start" placeholder="" style="width: 62%;" type="text"/>
+<input id="end" type="hidden" value="1110 E Broadway Ave , Gladewater, TX 75647"/>
+<input class="regular button-rounded-orange pull-right letter-spacing-2 uppercase font-16 bolder outline-none" id="getDirection" onclick="javascript:calcRoute();" type="button" value="Get Directions"/>
+</div>
+<div class="clear-fix"></div>
+</div>
+</div>
+<!-- END DIRECTIONS DIALOG -->
+<style>
+    .wide-directions {
+        top: 50px !important;
+    }   
+    #mapSummary {
+        width: 240px;
+    } 
+    #directionsPopup {
+           height: 465px !important;
+    }
+    #directionsPopup.open {
+           height: 700px !important;
+    }
+    .adp-placemark td {
+        padding: 5px 10px;
+        vertical-align: middle;
+    }
+    td.adp-text {
+        padding-left: 0;
+        font-family: MuseoSans-300;
+        font-size: 18px;
+    }
+    .adp-directions {
+        font-size: 16px;
+    }
+    .adp-legal {
+        font-size: 12px;
+        font-family: MuseoSans-300;
+        color: #656465;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 20px;
+    }
+    .ui-widget-overlay {
+        position: fixed;
+    }
+    .travel-mode, #mapPrint, #mapReverse {
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        padding: 8px;
+    }
+    .travel-mode.active {
+        background: #00adc2 !important;
+    }
+    #directionsWrapper {
+        padding: 0 5px !important;
+    }
+</style>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;libraries=places&amp;key=AIzaSyC6Ab0FcmWAe0YHQMWu-eWQB_dzufXC_Zw"></script>
+<script>
+    var map;
+    var directionsDisplay;
+    var directionsService;
+    var stepDisplay;
+    var markerArray = [];
+    var marker;
+    var placeSearch, autocomplete;
+
+    function initialize() {
+        // Instantiate a directions service.
+        directionsService = new google.maps.DirectionsService();
+
+        autocomplete = new google.maps.places.Autocomplete(
+            (document.getElementById('start')),
+            { types: ['geocode'] }
+        );
+
+        google.maps.event.addListener(autocomplete, 'place_changed', function() {
+        });
+
+        // Create a map
+        var mapOptions = {
+            zoom: 10,
+            center: new google.maps.LatLng("32.5335", "-94.9297")
+        }
+        map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+        // Create a renderer for directions and bind it to the map.
+        var rendererOptions = {
+            map: map
+        }
+        directionsDisplay = new google.maps.DirectionsRenderer(rendererOptions)
+        directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+        var redIcon   = 'http://www.google.com/intl/en_us/mapfiles/ms/micons/red-dot.png';
+
+        marker = new google.maps.Marker({
+            position: new  google.maps.LatLng("32.5335", "-94.9297"),
+            map:map,
+            icon: redIcon
+        });
+
+        // Instantiate an info window to hold step text.
+        stepDisplay = new google.maps.InfoWindow();
+
+    }
+
+    // Recalculate Route and redisplay directions
+    function calcRoute(mode) {
+        if (!(mode)){
+            mode = google.maps.TravelMode.DRIVING;
+        }
+        else{
+            mode =  mode;
+        }
+        var start = document.getElementById('start').value;
+        var end = document.getElementById('end').value;
+        var request = {
+            origin: start,
+            destination: end,
+            travelMode: google.maps.TravelMode[mode]
+        };
+        directionsService.route(request, function (response, status) {
+            // if directions were found, display them
+            if (status == google.maps.DirectionsStatus.OK) {
+                marker.setMap(null);
+                directionsDisplay.setDirections(response);
+                $("#directionsPopup").addClass("open");
+                $("#directionsWrapper").css({"height": "640px", "overflow-y": "scroll"});
+                $("#directions-panel").show();
+                $("#directionsPopup").animate({ scrollTop: 0 }, "fast");
+                lastCenter = map.getCenter();
+                google.maps.event.trigger(map, 'resize');
+                map.setCenter(lastCenter);
+
+                setTimeout(function () {
+                    $("#mapSummary").empty();
+                    var travelMode = $(".travel-mode.active").attr("id");
+                    $("#mapSummary").append($(document.createElement("span")).append(document.createTextNode(travelMode + " directions")).addClass("capitalize"));
+                    $("#directions-panel .adp-summary").appendTo("#mapSummary");
+                    $("#map-summary").show();
+                });
+            }
+            // else if no directions, reset to search box
+            else {
+                $("#directions-panel").hide();
+                $("#map-summary").hide();
+                $(".travel-mode").removeClass("active");
+                $(".travel-mode#driving").addClass("active");
+            }
+        });
+
+
+    }
+
+    google.maps.event.addDomListener(window, 'load', initialize);
+
+    function getDirections() {
+        $("#directionsPopup").dialog({
+            height: 475,
+            resizable: false,
+            modal: true,
+            width: 685,
+            dialogClass: "dr-dialog-wide dialog-gray wide-directions",
+            open: function () {
+                window.scrollTo(0, 0);
+
+                // click anywhere outside the  map dialog, close it
+                $(".ui-widget-overlay, #directionsPopup .close-dialog").click(function (e) {
+                    $("#directionsPopup").dialog("close");
+                });
+
+                // make height larger if already got directions
+                if ($("#map-summary").css("display") == "block") {
+                    $("#directionsPopup").css("height", "700px !important");
+                    $("#directionsWrapper").css("height", "640px");
+                }
+            },
+            close: function () {
+            }
+    });
+
+    lastCenter = map.getCenter();
+    google.maps.event.trigger(map, 'resize');
+    map.setCenter(lastCenter);
+    }
+
+
+    // On document ready, add click listeners
+    $(document).ready(function () {
+        // Change travel mode
+        $(".travel-mode").click(function () {
+            $(".travel-mode").removeClass("active");
+            $(this).addClass("active");
+            calcRoute($(this).attr("id").toUpperCase());
+        });
+
+        // Print directions
+        $("#mapPrint").click(function () {
+            var printWindow = window.open();
+            printWindow.document.write($(".wide-directions").html());
+            printWindow.document.write("<style>#map-summary, #get-directions, .ui-dialog-titlebar{display: none !important;}</style>");
+            printWindow.document.close(); //this seems to be the thing doing the trick
+            printWindow.focus();
+            printWindow.print();
+            printWindow.close();
+        });
+
+        // Reverse directions
+        $("#mapReverse").click(function () {
+            var start = $("#start").val();
+            var end = $("#end").val();
+            var mode = $(".travel-mode.active").attr("id").toUpperCase();
+            $("#start").val(end);
+            $("#end").val(start);
+
+            calcRoute(mode);
+        });
+
+        
+    });
+
+</script>
+<script type="text/javascript">
+    // on click of "read more", open or close review content
+    $(".read-more-toggle").click(function () {
+        // toggle parent open class
+        var reviewWrapperElem = $(this).closest('.review-wrapper');
+        $(reviewWrapperElem).toggleClass("open");
+
+        // change text of read more link
+        if ($(reviewWrapperElem).hasClass("open")) {
+            $(this).html("Read Less");
+
+            // show public messages
+            $(reviewWrapperElem).find("p.review-response").each(function () {
+                $(this).text($(this).data("originalText"));
+                $(this).parent().addClass("open");
+            });
+            $(reviewWrapperElem).find("a.response-toggle").html("Read Less");
+
+        } else {
+            $(this).html("Read More");
+
+            // hide public messages
+            $(reviewWrapperElem).find("p.review-response").each(function () {
+                $(this).text($(this).data("shortText"));
+                $(this).parent().removeClass("open");
+            });
+            $(reviewWrapperElem).find("a.response-toggle").html("Read More");
+
+        }
+        return false;
+    });
+
+    /**
+* Marks a review as helpful to the viewer.  Site visitors can up-vote a review once per browser
+* session, enforced by a cookie.
+* @param id The review ID to up vote.
+*/
+    function MarkReviewHelpful(id, elem) {
+        $(elem).removeAttr('onClick');
+        // only mark the review as helpful one time...
+        if ($.cookie("HelpfulReviewIds") == null ||
+            $.inArray(id.toString(), $.cookie('HelpfulReviewIds').split(':')) == -1) {
+            // grab the node that has the count, show it (if it isn't visible) and increment the value
+            var countNode = $('#helpful_count_' + id);
+            countNode.show();
+            countNode.text(parseInt(countNode.text()) + 1);
+
+            // call the AJAX endpoint to audit
+            $.getJSON('/json/reviews/helpful?reviewId=' + id);
+        }
+        $(elem).click(function () {
+            return false;
+        });
+    }
+
+    // when a tagged employee image or its contents are clicked redirect to the employee details page
+    $('.review-employee').click(function () {
+        var a = $(this).find('a');
+        if (a.length) {
+            var link = a.attr("href");
+            window.location.href = link;
+        }
+    });
+
+    /**
+     * Shows the given lotshot image in the popup.
+     * @param image The image we're showing in the popup.
+     */
+    function ShowLotshotImage(image) {
+        var imagePath = $(image).attr("src").replace("-th", "");        
+        /// if lot shot image was clicked on mobile, open in a new window
+        if ($("#mobileNavContainer .logo-sm").css("height") == "35px") {            
+            //window.open($(image).attr("src"));
+            var lotShot = '<img src="' + imagePath + '" width="100%"/>';
+            $('#mobile-lotshot-image').html(lotShot);
+            toggleLotShotPage();
+        }
+            // else show lotshot dialog
+        else {
+            $("#dialog_lotshot_popup img").attr("src", "");
+            $("#dialog_lotshot_popup img").attr("src", imagePath);
+            $("#dialog_lotshot_popup").dialog("open");
+            $('.ui-dialog :button').blur();
+        }
+    }
+
+    /**
+     * Toggles when to show the mobile lotshot image.
+     */
+    function toggleLotShotPage() {
+        $('#mobile-lotshot').toggle();
+    }
+
+    
+            $("#dialog_lotshot_popup").dialog({
+                title: "Lotshot Photo",
+        dialogClass: "dr-dialog",
+    width: 550,
+    resizable: false,
+    autoOpen: false,
+    modal: true
+    });
+
+</script>
+<script>
+        // preselect correct filter option.  i had the option to bind to the model, but
+        // to do that would require the creation of another enum -- more code.
+        $("#review-filter option[value=ALL_REVIEWS]").attr("selected", "true");
+
+        // when the review filter changes, reset page to 1 and refresh
+        $("#review-filter").change(function () {
+            document.location.href = '/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/?filter=' + $("#review-filter option:selected").val() + '#link';
+        });
+        $(document).ready(function() { 
+
+    $("#dialog-report").dialog({
+        autoOpen: false,
+        resizable: false,
+        modal: true,
+        width: 650,
+        dialogClass: "dr-dialog report-dialog",
+        close: function () {
+            $("#dialog-report label[name^=_]").hide();
+            $("#dialog-report label[name^=-]").show();
+        }
+    });
+
+    window.submitReport = function () {
+        var form = $('#report_form');
+        if ($(form).valid()) {
+            $('.submitReport').attr('disabled', true);            
+            if (form.attr('action') == '/json/reviews/dealerreport') {
+                var formData = form.serialize();
+                ajaxCall(form, formData);
+            }
+            else {
+                window.GoogleCaptcha.ShowCaptchaDialog({
+                    instanceId: $(this).closest('form').attr('id'),
+                    success: function(result) {
+                        onCaptchaSuccess(result, form);
+                    }
+                });
+            }        
+        }
+    }
+
+    window.closeReport = function () {
+        $("#dialog-report").dialog("close");
+    }
+
+    
+    window.reportReview = function (id) {
+        
+        $("#report_form")[0].reset();
+
+        
+        $("#dialog-report").dialog("open");
+        $("#ReviewId").val(id);
+        
+        $("#report_form").validate().resetForm();
+        $("#report_form span[class=field-validation-error] span").remove();
+    }
+
+    $("#dialog-report-submitted").dialog({
+        autoOpen: false,
+        resizable: false,
+        modal: true,
+        width: 400,
+        buttons: {
+            "OK": function () {
+                $(this).dialog("close");
+            }
+        },
+        dialogClass: "dr-dialog report-dialog"
+    });
+
+    $("#Reason").change(function () {
+        if ($("#Reason").val() === "") {
+            $("#dialog-report label[name^=_]").hide();
+            $("#dialog-report label[name^=-]").show();
+        } else {
+            $("#dialog-report label[name^=-]").hide();
+            $("#dialog-report label[name^=_]").hide();
+            $("#dialog-report label[name^=_" + $("#Reason").val() + "]").show();
+        }
+    });
+
+    window.onCaptchaSuccess = function (result, formElem) {
+        $("#dialog_reportReview_in_progress").dialog("open");
+        var formData = formElem.serialize() + '&' + $.param({ 'captchaResult': result });
+        ajaxCall(formElem, formData);
+    };
+
+    function ajaxCall(form, data) {
+        $.ajax({
+            url: form.attr('action'),
+            type: form.attr('method'),
+            data: data,
+            success: function (result) {
+                $('#dialog-report').dialog("close"); 
+                if ($('#dialog-report-submitted a').length) 
+                    $('#dialog-report-submitted a').attr("href", $('#dialog-report-submitted a').attr("href").replace(/\w+\.aspx/i, result.ReportCode + ".aspx"));
+                $("#dialog_reportReview_in_progress").dialog("close");
+                $('#dialog-report-submitted').dialog("open");
+                $('.submitReport').removeAttr('disabled');
+            }
+        });
+}
+
+$('#dialog_reportReview_in_progress').dialog({
+            width: 375,
+            height: 180,
+            dialogClass: "dr-dialog",
+            resizable: false,
+            autoOpen: false,
+            modal: true
+        });
+; });
+    </script>
+<!-- start Mixpanel --><script type="text/javascript">(function(f,b){if(!b.__SV){var a,e,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=f.createElement("script");a.type="text/javascript";a.async=!0;a.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";e=f.getElementsByTagName("script")[0];e.parentNode.insertBefore(a,e)}})(document,window.mixpanel||[]);
+mixpanel.init("59f93360967cd175f5e8c1f42203479e");</script><!-- end Mixpanel --><script type="text/javascript">
+
+  function recordMixpanelEvent(name, args) {
+ args["Review Reader"] = "True";
+ args["Certified Status"] = "Certified Dealer";
+ args["Dealership Viewed"] = [23685];
+ args["Landing Page"] = "";
+ args["Logged-In State"] = "Not Logged-in";
+    $(document).ready(function() {if ($("#mobileNavContainer").css("display") == "block") { if ($("#mobileNavContainer .logo-sm").height() == 75) {args["Device Category"] = "Tablet"; } else { args["Device Category"] = "Mobile";}} else {args["Device Category"] = "Desktop";} mixpanel.track(name, args); });
+  }
+
+recordMixpanelEvent("Cross-Shopping", {"Makes Viewed": ["Buick","Chevrolet","Service Center"]});</script>
+<!-- Begin comScore Tag -->
+<script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "19272502" });
+    (function () {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+</script>
+<noscript>
+<img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=19272502&amp;cv=2.0&amp;cj=1"/>
+</noscript>
+<!-- End comScore Tag -->
+<!-- common scripts for all pages -->
+<script type="text/javascript">
+    window.onload = function() {  };
+
+    $(document).ready(function () {
+        $('input[id="headerAutoComplete"]').keydown( function (e) {
+            if (e.which == 13) {
+                location.href = '/search/?q=' + escape($('#' + $(this).context.id).val());
+            }
+        });
+        $('#pushdownNoticeClose').click(function () {
+            $('#pushdownNotice').fadeOut(250, function () {
+                $.cookie("suppressLocalizationPrompt", "true", { "path": "/" });
+            });
+        });
+        //pad footer placement
+        var fillH = $(window).height() - ($('footer').height() + $('header').height() + 141);
+        if ($('#contentInner').height() < fillH) $('#contentInner').css({ 'height': fillH });
+
+        filterUI.handleRetina();
+
+        
+        $(window).one('scroll', function() {
+            $("#footerContainer")[0].style.cssText += ';-webkit-transform:rotateZ(360deg)';
+            $("#footerContainer")[0].style.cssText += ';-webkit-transform:rotateZ(0deg)';
+        });
+    });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.header-search-input').autocomplete({
+      delay: "125",
+      source: "/ajax/quickdealersearch.aspx?maxItems=7",
+      minLength: 2,
+      position: {
+        my: 'right+33 top+5',
+        of: '.header-search-submit',
+      },
+      create: function(){$(this).data("uiAutocomplete").menu.element.addClass("dealerAutocomplete");},
+       renderItem: function (ul, item) {
+         return $("<li><a><table cellspacing='0' cellpadding='0'><tr><td width='40' rowspan='2' align='bottom'><img src='" + (item.isCertified == 1 ? "/images/badge-certified-dealer.png" : "/images/spacer.gif") + "' width='35' height='45' /><td valign='bottom' class='bold'>" + item.dealerName + "</td></tr><tr><td valign='top'>" + item.city + ", " + item.state + "</td></table></a></li>").appendTo(ul);
+       },
+       renderFooter: function (ul) {
+         return $("<li><a href='#'><div width='100%' align='center'>View More</div></a></li>").appendTo(ul);
+       },
+       select: function (event, ui) { 
+      if (ui.item == null) { 
+        location.href = '/search/?q=' + escape($('#' + $(this).context.id).val());
+      } else { 
+        location.href = '/d/' + ui.item.id;
+  } },
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.footer-search-input').autocomplete({
+      delay: "125",
+      source: "/ajax/quickdealersearch.aspx?maxItems=7",
+      minLength: 2,
+      position: {
+        my: 'right+25 bottom-20',
+        of: '.footer-search-submit',
+      },
+      create: function(){$(this).data("uiAutocomplete").menu.element.addClass("dealerAutocomplete");},
+       renderItem: function (ul, item) {
+         return $("<li><a><table cellspacing='0' cellpadding='0'><tr><td width='40' rowspan='2' align='bottom'><img src='" + (item.isCertified == 1 ? "/images/badge-certified-dealer.png" : "/images/spacer.gif") + "' width='35' height='45' /><td valign='bottom' class='bold'>" + item.dealerName + "</td></tr><tr><td valign='top'>" + item.city + ", " + item.state + "</td></table></a></li>").appendTo(ul);
+       },
+       renderFooter: function (ul) {
+         return $("<li><a href='#'><div width='100%' align='center'>View More</div></a></li>").appendTo(ul);
+       },
+       select: function (event, ui) { 
+      if (ui.item == null) { 
+        location.href = '/search/?q=' + escape($('#' + $(this).context.id).val());
+      } else { 
+        location.href = '/d/' + ui.item.id;
+  } },
+    });
+  });
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.header-mobile-search-input').autocomplete({
+      delay: "125",
+      source: "/ajax/quickdealersearch.aspx?maxItems=7",
+      minLength: 2,
+      position: {
+        my: 'right+28 top+10',
+        of: '.header-mobile-search-submit',
+      },
+      create: function(){$(this).data("uiAutocomplete").menu.element.addClass("dealerAutocomplete");},
+       renderItem: function (ul, item) {
+         return $("<li><a><table cellspacing='0' cellpadding='0'><tr><td width='40' rowspan='2' align='bottom'><img src='" + (item.isCertified == 1 ? "/images/badge-certified-dealer.png" : "/images/spacer.gif") + "' width='35' height='45' /><td valign='bottom' class='bold'>" + item.dealerName + "</td></tr><tr><td valign='top'>" + item.city + ", " + item.state + "</td></table></a></li>").appendTo(ul);
+       },
+       renderFooter: function (ul) {
+         return $("<li><a href='#'><div width='100%' align='center'>View More</div></a></li>").appendTo(ul);
+       },
+       select: function (event, ui) { 
+      if (ui.item == null) { 
+        location.href = '/search/?q=' + escape($('#' + $(this).context.id).val());
+      } else { 
+        location.href = '/d/' + ui.item.id;
+  } },
+    });
+  });
+</script>
+<!-- Adobe Analytics footer -->
+<script type="text/javascript">_satellite.pageBottom();</script>
+</body>
+</html>
