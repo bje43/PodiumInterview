@@ -8,12 +8,22 @@ from ScraperStrategies.SimpleReviewScraper import SimpleReviewScraper
 
 class ReviewAnalyzerEngine(object):
 
-    def __init__(self):
+    def get_user_input(self):
         self.review_analyzer = self.get_review_analyzer_from_prompt()
         self.review_scraper = self.get_review_scraper_from_prompt()
         self.number_of_crawlers = self.get_number_of_crawlers_from_prompt()
         self.number_of_pages_to_scrape = self.get_number_of_pages_to_scrape_from_prompt()
         self.number_of_reviews_to_display = self.get_number_of_reviews_to_display_from_prompt()
+        self.is_initialized = 1
+        return
+
+    def set_engine_attributes(self,review_analyzer, review_scraper, number_of_crawlers, number_of_page_to_scrape, number_of_reviews_to_display):
+        self.review_analyzer = review_analyzer
+        self.review_scraper = review_scraper
+        self.number_of_crawlers = number_of_crawlers
+        self.number_of_pages_to_scrape = number_of_page_to_scrape
+        self.number_of_reviews_to_display = number_of_reviews_to_display
+        self.is_initialized = 1
         return
 
     def get_review_analyzer_from_prompt(self):
@@ -56,6 +66,9 @@ class ReviewAnalyzerEngine(object):
         return num
 
     def run(self):
+
+        if not self.is_initialized: self.get_user_input()
+
         website = "http://www.dealerrater.com/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/"
         target = "review-content"
         review_list = self.review_scraper.scrape_reviews_from_page(website, target, self.number_of_pages_to_scrape, self.number_of_crawlers)
@@ -65,7 +78,7 @@ class ReviewAnalyzerEngine(object):
         review_printer = ReviewPrinter()
         review_printer.print_review_list(review_list,self.number_of_reviews_to_display)
 
-        return
+        return review_list
 
 
 if __name__=="__main__":
