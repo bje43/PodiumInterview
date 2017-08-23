@@ -17,11 +17,11 @@ Clone the repository and, from the project directory, run:
 Brief Overview
 ========
 
-Welcome to the Podium web scraper and review analyzer. To run, enter:
+Welcome to the Podium web scraper and review analyzer. To run, execute the following command:
 
     python ReviewAnalyzerEngine.py
 
-into the command prompt from the project directory. Upon doing so, you will be prompted to choose the method to use for review scoring, web scraping, the number of pages to crawl, and the number of reviews to display at the end. 
+Upon doing so, you will be prompted to choose the method to use for review scoring, web scraping, the number of pages to crawl, and the number of reviews to display at the end. Once you've selected all your options, the report of the most positive reviews found on the crawled pages will be printed out to the terminal.
 
 For more information on review scoring and web scraping methods, see the following sections.
 
