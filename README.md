@@ -12,23 +12,25 @@ Clone the repository and, from the project directory, run:
 
     sudo python setup.py install  
 
-(There is an OS X bug that will sometimes cause the setup.py to fail the first time due to an incorrect installation order of dependencies listed in the setup file. Repeating the install should clean this up if it occurs)
+(There is an OS X bug that will sometimes cause the setup.py to fail the first time due to an incorrect installation order of the dependencies listed in the setup file. Repeating the install should clean this up if it occurs)
 
 Brief Overview
 ========
 
-Welcome to the Podium web scraper and review analyzer. To run, execute the following command:
+Welcome to the Podium web scraper and review analyzer. I can only imagine the excitement you must be experiencing as you delve into this README. This program scrapes reviews off the website of the [McKaig Chevrolet Buick Dealership](http://www.dealerrater.com/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-review-23685/) and prints out the reviews that were the most overly positive.
+
+To run the program, execute the following command:
 
     python ReviewAnalyzerEngine.py
 
-Upon doing so, you will be prompted to choose the method to use for review scoring, web scraping, the number of pages to crawl, and the number of reviews to display at the end. Once you've selected all your options, the report of the most positive reviews found on the crawled pages will be printed out to the terminal.
+Upon doing this, you will be prompted to choose the method to use for review scoring and web scraping, the number of pages to crawl, and the number of reviews to display at the end. Once you've selected all your options, the report of the most positive reviews found on the crawled pages will be printed out to the terminal.
 
 For more information on review scoring and web scraping methods, see the following sections.
 
 Review Positivity Ranking
 ========
 
-There are two methods that can be used to score how positive the reviews are. These are sentiment classifiers from the [Pattern module](http://www.clips.ua.ac.be/pages/pattern-en) and the [NLTK python library](http://www.nltk.org/) respectively. Below is a brief description of the two sentiment analyzers:
+There are two methods that can be used to score the positivity of the reviews. These are sentiment classifiers from the [Pattern module](http://www.clips.ua.ac.be/pages/pattern-en) and the [NLTK python library](http://www.nltk.org/) respectively. Below is a brief description of the two sentiment analyzers:
 
 ### 1. PatternAnalyzer
 This sentiment analyzer is a python extension of "Pattern", which uses fast part-of-speech tagging to quickly analyze sentences and return a polarity and subjectivity score. The module bundles a lexicon of adjectives (e.g., good, bad, amazing, irritating, ...) that occur frequently in product reviews, annotated with scores for sentiment polarity (positive ↔ negative) and subjectivity (objective ↔ subjective). When using this analyzer, reviews with the higher polarity (more positive) scores, will be ranked above those with lower polarity scores.
