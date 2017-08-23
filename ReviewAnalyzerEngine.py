@@ -16,15 +16,6 @@ class ReviewAnalyzerEngine(object):
         self.number_of_reviews_to_display = self.get_number_of_reviews_to_display_from_prompt()
         return
 
-    def set_engine_attributes(self,review_analyzer, review_scraper, number_of_crawlers, number_of_page_to_scrape, number_of_reviews_to_display):
-        self.review_analyzer = review_analyzer
-        self.review_scraper = review_scraper
-        self.number_of_crawlers = number_of_crawlers
-        self.number_of_pages_to_scrape = number_of_page_to_scrape
-        self.number_of_reviews_to_display = number_of_reviews_to_display
-        self.is_initialized = 1
-        return
-
     def get_review_analyzer_from_prompt(self):
         valid_options = {"1":PatternReviewAnalyzer(),"2":NaiveBayesReviewAnalyzer()}
         prompt = """Please enter the number of the type of analyzer you would like to use to score review positivity:\n
@@ -48,14 +39,17 @@ class ReviewAnalyzerEngine(object):
     def get_number_of_crawlers_from_prompt(self):
         number_of_crawlers = 1
         if isinstance(self.review_scraper,ScrapyReviewScraper):
-            number_of_crawlers = self.get_pos_int_from_prompt("Please enter the number of crawlers you would like to use:\n")
+            prompt = "Please enter the number of crawlers you would like to use:\n"
+            number_of_crawlers = self.get_pos_int_from_prompt(prompt)
         return number_of_crawlers
 
     def get_number_of_pages_to_scrape_from_prompt(self):
-        return self.get_pos_int_from_prompt("Please enter the number of pages you would like to scrape reviews for:\n")
+        prompt = "Please enter the number of pages you would like to scrape reviews for:\n"
+        return self.get_pos_int_from_prompt(prompt)
 
     def get_number_of_reviews_to_display_from_prompt(self):
-        return self.get_pos_int_from_prompt("Please enter the number of reviews you would like to display:\n")
+        prompt = "Please enter the number of reviews you would like to display:\n"
+        return self.get_pos_int_from_prompt(prompt)
 
     def get_pos_int_from_prompt(self, prompt):
         num = 0
@@ -64,9 +58,9 @@ class ReviewAnalyzerEngine(object):
             if num.isdigit(): num = int(num)
         return num
 
-    def run(self, prompt_for_input):
+    def run(self,get_user_input):
 
-        if prompt_for_input: self.get_user_input()
+        if get_user_input: self.get_user_input()
 
         website = "http://www.dealerrater.com/dealer/McKaig-Chevrolet-Buick-A-Dealer-For-The-People-dealer-reviews-23685/"
         target = "review-content"
