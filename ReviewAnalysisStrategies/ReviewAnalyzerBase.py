@@ -1,6 +1,7 @@
 import abc
 import bisect
 
+
 class ReviewAnalyzerBase(object):
 
     __metaclass__ = abc.ABCMeta
@@ -10,7 +11,7 @@ class ReviewAnalyzerBase(object):
         for review in review_list:
             review_score = self.get_review_score(review.review_text)
             review.set_positivity_score(review_score)
-            bisect.insort(analyzed_reviews,review)
+            bisect.insort(analyzed_reviews, review)
         return analyzed_reviews
 
     @abc.abstractmethod

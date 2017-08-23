@@ -1,6 +1,7 @@
 from ReviewObjects.Review import Review
 import unittest
 
+
 class TestReviewMethods(unittest.TestCase):
 
     def test_initialize(self):
@@ -13,14 +14,14 @@ class TestReviewMethods(unittest.TestCase):
     def test_comparator(self):
         compare_with = Review("", .5)
 
-        lowerReview = Review("", .49)
-        self.assertTrue(compare_with.__lt__(lowerReview))
+        lower_review = Review("", .49)
+        self.assertTrue(compare_with.__lt__(lower_review))
 
-        greaterReview = Review("", .51)
-        self.assertFalse(compare_with.__lt__(greaterReview))
+        greater_review = Review("", .51)
+        self.assertFalse(compare_with.__lt__(greater_review))
 
-        equalReview = Review("", .5)
-        self.assertFalse(compare_with.__lt__(equalReview))
+        equal_review = Review("", .5)
+        self.assertFalse(compare_with.__lt__(equal_review))
 
     def test_set_pos_score(self):
         base_review = Review("", 0)

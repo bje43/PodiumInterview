@@ -13,7 +13,7 @@ class ScrapyReviewScraper(ReviewScraperBase):
 
     def scrape_reviews_from_page(self, web_url, class_target, num_pages_to_scrape, number_of_crawlers):
 
-        self.setup_urls_to_visit(web_url,num_pages_to_scrape)
+        self.setup_urls_to_visit(web_url, num_pages_to_scrape)
 
         self.deploy_crawlers(number_of_crawlers, class_target)
 
@@ -25,7 +25,7 @@ class ScrapyReviewScraper(ReviewScraperBase):
         process = CrawlerProcess()
 
         for i in range(0, number_of_crawlers):
-            process.crawl(ReviewSpider,scraper_parent=self,class_target=class_target)
+            process.crawl(ReviewSpider, scraper_parent=self, class_target=class_target)
 
         process.start()
 
@@ -67,7 +67,7 @@ class ReviewSpider(scrapy.Spider):
             self.start_urls = [next_url]
 
     def parse(self, response):
-        path = "//*[contains(@class,'" + self.class_target +"')]/text()"
+        path = "//*[contains(@class,'" + self.class_target + "')]/text()"
         reviews = response.xpath(path).extract()
         for review_text in reviews:
             self.scraper_parent.add_review(review_text)

@@ -1,5 +1,6 @@
 import abc
 
+
 class HtmlRetrieverBase(object):
     __metaclass__ = abc.ABCMeta
 

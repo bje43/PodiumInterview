@@ -30,7 +30,3 @@ class SimpleReviewScraper(ReviewScraperBase):
             review_list[i] = Review(review_text, 0)
 
         return review_list
-
-
-
-

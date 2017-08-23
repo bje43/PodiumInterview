@@ -1,5 +1,6 @@
 import abc
 
+
 class ReviewScraperBase(object):
     __metaclass__ = abc.ABCMeta
 

@@ -11,7 +11,3 @@ class NaiveBayesReviewAnalyzer(ReviewAnalyzerBase):
     def get_review_score(self, review_text):
         analysis = self.classifier(str(review_text))
         return analysis.sentiment.p_pos
-
-
-
-

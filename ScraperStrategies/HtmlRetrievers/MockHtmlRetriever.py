@@ -2,6 +2,7 @@ from ScraperStrategies.HtmlRetrievers.HtmlRetrieverBase import HtmlRetrieverBase
 from bs4 import BeautifulSoup
 import os.path
 
+
 class MockHtmlRetriever(HtmlRetrieverBase):
 
     def retrieve_page_content(self, file_name):
