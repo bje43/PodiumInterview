@@ -28,10 +28,10 @@ For more information on review scoring and web scraping methods, see the followi
 Review Positivity Ranking
 ========
 
-There are two methods that can be used to score how positive the reviews are. These are sentiment classifiers from the [Patternmodule](http://www.clips.ua.ac.be/pages/pattern-en) and the [NLTK python library](http://www.nltk.org/) respectively. Below is a brief description of the two sentiment analyzers:
+There are two methods that can be used to score how positive the reviews are. These are sentiment classifiers from the [Pattern module](http://www.clips.ua.ac.be/pages/pattern-en) and the [NLTK python library](http://www.nltk.org/) respectively. Below is a brief description of the two sentiment analyzers:
 
 ### 1. PatternAnalyzer
-This sentiment analyzer is a python extension of the "Pattern", which uses fast part-of-speech tagging to quickly analyze sentences and return a polarity and subjectivity score. The module bundles a lexicon of adjectives (e.g., good, bad, amazing, irritating, ...) that occur frequently in product reviews, annotated with scores for sentiment polarity (positive ↔ negative) and subjectivity (objective ↔ subjective). When using this analyzer, reviews with the higher polarity (more positive) scores, will be ranked above those with lower polarity scores.
+This sentiment analyzer is a python extension of "Pattern", which uses fast part-of-speech tagging to quickly analyze sentences and return a polarity and subjectivity score. The module bundles a lexicon of adjectives (e.g., good, bad, amazing, irritating, ...) that occur frequently in product reviews, annotated with scores for sentiment polarity (positive ↔ negative) and subjectivity (objective ↔ subjective). When using this analyzer, reviews with the higher polarity (more positive) scores, will be ranked above those with lower polarity scores.
 
 ### 2. NaiveBayesAnalyzer
 This sentiment analyzer is a module from the NLTK platform. It uses a Naive Bayes model trained on a corpus of movie reviews. After the model has been trained, it classifies strings of text on the likelihood that they are positive reviews or negative reviews. When using this analyzer, reviews with a higher likelihood of being positive are more ranked above those with a lower likelihood of being positive.
